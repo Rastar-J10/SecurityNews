@@ -377,6 +377,11 @@
             content_style: "img {max-width:100%;}",
             language: 'zh_CN',
             plugins: 'code link image table fullscreen preview formatpainter axupimgs imagetools charmap emoticons hr ax_wordlimit media',
+            toolbar: 'undo redo | forecolor backcolor bold italic underline strikethrough | alignleft aligncenter alignright alignjustify outdent indent |styleselect fontselect fontsizeselect | charmap emoticons hr |link image media table fullscreen preview formatpainter',
+            ax_wordlimit_num: 10000,
+            ax_wordlimit_callback: function (editor, txt, num) {
+                tipsJS('当前字数：' + txt.length + '，限制字数：' + num);
+            },
             menubar: false,
             media_live_embeds: true,
             file_picker_types: 'media',
@@ -434,11 +439,6 @@
                     input.click();
                 }
             },
-            toolbar: 'undo redo | forecolor backcolor bold italic underline strikethrough | alignleft aligncenter alignright alignjustify outdent indent |styleselect fontselect fontsizeselect | charmap emoticons hr |link image media table fullscreen preview formatpainter',
-            ax_wordlimit_num: 10000,
-            ax_wordlimit_callback: function (editor, txt, num) {
-                tipsJS('当前字数：' + txt.length + '，限制字数：' + num);
-            },
             images_upload_handler: function (blobInfo, succFun, failFun) {
                 var formData;
                 var file = blobInfo.blob();//转化为易于理解的file对象
@@ -453,6 +453,7 @@
                         return;
                     }
                     json = JSON.parse(xhr.responseText);
+                    console.log(json);
                     succFun(json.data);
                 };
                 formData = new FormData();
