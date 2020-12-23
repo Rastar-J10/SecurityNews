@@ -72,11 +72,10 @@ namespace PracticeApi.Controllers
                 }
                 var fileNam = $"{Guid.NewGuid():N}_{file.FileName}";//新文件名
                 string imgPath = $"{dirPath + fileNam}";//储存文件路径
-                thePath = "../../../PracticeApi/Uploads/Images/" + fileNam;
                 using var stream = new FileStream(imgPath, FileMode.Create);//文件流
                 await file.CopyToAsync(stream);//将上传的文件文件流，复制到fs中
                 stream.Flush();//清空文件流
-                return ResModel.Success(thePath, "上传图片成功，新的文件路径已返回");
+                return ResModel.Success(imgPath, "上传图片成功，新的文件路径已返回");
             }
             catch (Exception ex)
             {
@@ -121,12 +120,11 @@ namespace PracticeApi.Controllers
                     Directory.CreateDirectory(dirPath);
                 }
                 var fileNam = $"{Guid.NewGuid():N}_{file.FileName}";//新文件名
-                string imgPath = $"{dirPath + fileNam}";//储存文件路径
-                thePath = "../../../PracticeApi/Uploads/Medias/" + fileNam;
-                using var stream = new FileStream(imgPath, FileMode.Create);//文件流
+                string filePath = $"{dirPath + fileNam}";//储存文件路径
+                using var stream = new FileStream(filePath, FileMode.Create);//文件流
                 await file.CopyToAsync(stream);//将上传的文件文件流，复制到fs中
                 stream.Flush();//清空文件流
-                return ResModel.Success(thePath, "上传文件成功，新的文件路径已返回");
+                return ResModel.Success(filePath, "上传文件成功，新的文件路径已返回");
             }
             catch (Exception ex)
             {
