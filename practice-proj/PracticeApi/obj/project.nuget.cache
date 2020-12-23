@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XsXY3h6ubDJepiYC8QwZtQAGQzQt8EierHCdNEzpbJb9URlaF4QftW9ATOWONTy17T4Xb02ckM3C7J2QmZyQMg==",
+  "dgSpecHash": "7WeCmKDRsWiUvnZ71b33fNuGfr1hNpDvUWPdYdgiwPa9r4Kc66k6FYVg2Ga/aWoEcTnSkTGnFQaG2pX1783fBQ==",
   "success": true,
-  "projectFilePath": "D:\\bst-test\\practice-proj\\PracticeApi\\PracticeApi.csproj",
+  "projectFilePath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\PracticeApi\\PracticeApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",

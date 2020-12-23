@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8pTjlEhawRMVtw7260TISwMdvoodJblun6Ng7SmjmaHwakJ6wc0im0e3jC+ORDW3+dbL3dIW/77DyXTLlgRS+g==",
+  "dgSpecHash": "vt3MYyYV19BATGXEHfa7N/YIAIHg/3JRplGrJ7/pL7yfsM7VXdFV+oSoH/VVgMO4TxZDtvi1/yAgDwgdmMGSCg==",
   "success": true,
-  "projectFilePath": "D:\\bst-test\\practice-proj\\Practice.Service\\Practice.Services.csproj",
+  "projectFilePath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\Practice.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\autofac\\5.1.2\\autofac.5.1.2.nupkg.sha512",
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",

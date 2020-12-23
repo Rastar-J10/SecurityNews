@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
+      "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
       "projectName": "Practice.IRepositories",
-      "projectPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
+      "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
       "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-      "outputPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\obj\\",
+      "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

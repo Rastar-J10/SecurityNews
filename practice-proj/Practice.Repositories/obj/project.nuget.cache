@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vR5etOGtq6/33sk/YhHP2FEbT+5p3dfpuZeBOKCsi2zNR2XPt8ybxkvK6avXI3TB0Mxxll+bTEXH987eH7G2iw==",
+  "dgSpecHash": "2GiZZczhDGuhe15pNoyihy02duXmZe6tUXCnHXMX0QgMvYrvvnry849UqmXdjjR+hnyvQEK51Sws70tn5flPDA==",
   "success": true,
-  "projectFilePath": "D:\\bst-test\\practice-proj\\Practice.Repositories\\Practice.Repositories.csproj",
+  "projectFilePath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Repositories\\Practice.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\autofac\\5.1.2\\autofac.5.1.2.nupkg.sha512",
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",

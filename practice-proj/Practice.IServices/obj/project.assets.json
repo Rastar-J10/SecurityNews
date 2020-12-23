@@ -654,11 +654,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
+      "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
       "projectName": "Practice.IServices",
-      "projectPath": "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
+      "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
       "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-      "outputPath": "D:\\bst-test\\practice-proj\\Practice.IServices\\obj\\",
+      "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -681,11 +681,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
-              "projectPath": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj"
+            "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
+              "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj"
             },
-            "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
-              "projectPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
+            "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
+              "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
             }
           }
         }

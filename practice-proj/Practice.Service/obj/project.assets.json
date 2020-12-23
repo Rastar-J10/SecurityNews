@@ -1463,11 +1463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.Service\\Practice.Services.csproj",
+      "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\Practice.Services.csproj",
       "projectName": "Practice.Services",
-      "projectPath": "D:\\bst-test\\practice-proj\\Practice.Service\\Practice.Services.csproj",
+      "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\Practice.Services.csproj",
       "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-      "outputPath": "D:\\bst-test\\practice-proj\\Practice.Service\\obj\\",
+      "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1490,17 +1490,17 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
-              "projectPath": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj"
+            "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
+              "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj"
             },
-            "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
-              "projectPath": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj"
+            "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
+              "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj"
             },
-            "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
-              "projectPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
+            "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
+              "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
             },
-            "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj": {
-              "projectPath": "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj"
+            "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj": {
+              "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj"
             }
           }
         }

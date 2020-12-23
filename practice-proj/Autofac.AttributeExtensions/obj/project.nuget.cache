@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vFL3Fbmv1w7xlyN1B0i/fVYqYCcdLmcz01/mbGn26+POyyPiQ1n0PRqDqDBYsdH0wlJyiB51bYrYa+dv2dfQqw==",
+  "dgSpecHash": "DG0ypDrpXgP1dRi9Ug1BExkZtWBvUqMTf5UqUn/AjC0z1NzU7sOijeuqVFW4/jaWsDQ9gGi2R8x/mZ3cKMqhYg==",
   "success": true,
-  "projectFilePath": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
+  "projectFilePath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\autofac\\5.1.2\\autofac.5.1.2.nupkg.sha512",
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

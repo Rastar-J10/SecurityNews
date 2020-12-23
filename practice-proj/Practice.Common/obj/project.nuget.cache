@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TIE5T3FbTVcUeAckHqVG1BAbTSxNBxWmDdZx1TwB7gc7lFc2j1jf0kG8AV3SbybI8qeF8zWQOALyua6vpm4otA==",
+  "dgSpecHash": "2HiEmJrkFZ6evdPfedGMBaRmKSZYuBTsDHxtXdEAgAeaXsuui7xJjXYkWiWhgSIleEGXJmoNK2hB02wYWVU2yw==",
   "success": true,
-  "projectFilePath": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj",
+  "projectFilePath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\bst-test\\practice-proj\\Practice.Service\\Practice.Services.csproj": {}
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\Practice.Services.csproj": {}
   },
   "projects": {
-    "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
+        "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
         "projectName": "Autofac.AttributeExtensions",
-        "projectPath": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
+        "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
         "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-        "outputPath": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\obj\\",
+        "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -70,14 +70,14 @@
         }
       }
     },
-    "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj",
+        "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj",
         "projectName": "Practice.Common",
-        "projectPath": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj",
+        "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj",
         "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-        "outputPath": "D:\\bst-test\\practice-proj\\Practice.Common\\obj\\",
+        "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -136,14 +136,14 @@
         }
       }
     },
-    "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
+        "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
         "projectName": "Practice.IRepositories",
-        "projectPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
+        "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj",
         "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-        "outputPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\obj\\",
+        "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -198,14 +198,14 @@
         }
       }
     },
-    "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj": {
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
+        "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
         "projectName": "Practice.IServices",
-        "projectPath": "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
+        "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
         "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-        "outputPath": "D:\\bst-test\\practice-proj\\Practice.IServices\\obj\\",
+        "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -228,11 +228,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
-                "projectPath": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj"
+              "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
+                "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj"
               },
-              "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
-                "projectPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
+              "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
+                "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
               }
             }
           }
@@ -279,14 +279,14 @@
         }
       }
     },
-    "D:\\bst-test\\practice-proj\\Practice.Service\\Practice.Services.csproj": {
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\Practice.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.Service\\Practice.Services.csproj",
+        "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\Practice.Services.csproj",
         "projectName": "Practice.Services",
-        "projectPath": "D:\\bst-test\\practice-proj\\Practice.Service\\Practice.Services.csproj",
+        "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\Practice.Services.csproj",
         "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-        "outputPath": "D:\\bst-test\\practice-proj\\Practice.Service\\obj\\",
+        "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -309,17 +309,17 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
-                "projectPath": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj"
+              "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
+                "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj"
               },
-              "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
-                "projectPath": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj"
+              "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
+                "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj"
               },
-              "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
-                "projectPath": "D:\\bst-test\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
+              "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj": {
+                "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IRepositories\\Practice.IRepositories.csproj"
               },
-              "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj": {
-                "projectPath": "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj"
+              "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj": {
+                "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj"
               }
             }
           }

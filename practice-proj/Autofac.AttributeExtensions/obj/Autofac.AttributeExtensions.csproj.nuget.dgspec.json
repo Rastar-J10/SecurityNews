@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {}
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {}
   },
   "projects": {
-    "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
+        "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
         "projectName": "Autofac.AttributeExtensions",
-        "projectPath": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
+        "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\Autofac.AttributeExtensions.csproj",
         "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-        "outputPath": "D:\\bst-test\\practice-proj\\Autofac.AttributeExtensions\\obj\\",
+        "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Autofac.AttributeExtensions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

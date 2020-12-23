@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rS8KsiRSUlTfDH/SKOAKkauAMu1dq4PKhjvbIj3FWYZDw7AIAvjVeIsMX2/ZlNw30eyOesoX11PibLrZG4mlZw==",
+  "dgSpecHash": "InKJPDrrSN8Jv+LW0rat4tS0Xz4IxP9m8f0IrNIsJVHcXxLVRWbNzoy+XvA4KiHHypLv4YqSOc40h2NGulAiMw==",
   "success": true,
-  "projectFilePath": "D:\\bst-test\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
+  "projectFilePath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.IServices\\Practice.IServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

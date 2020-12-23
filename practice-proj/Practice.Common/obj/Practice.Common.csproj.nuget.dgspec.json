@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj": {}
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj": {}
   },
   "projects": {
-    "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
+    "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj",
+        "projectUniqueName": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj",
         "projectName": "Practice.Common",
-        "projectPath": "D:\\bst-test\\practice-proj\\Practice.Common\\Practice.Common.csproj",
+        "projectPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\Practice.Common.csproj",
         "packagesPath": "C:\\Users\\ZhangKaiCheng\\.nuget\\packages\\",
-        "outputPath": "D:\\bst-test\\practice-proj\\Practice.Common\\obj\\",
+        "outputPath": "C:\\Users\\ZhangKaiCheng\\Desktop\\ac\\SecurityNews\\practice-proj\\Practice.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
