@@ -1,0 +1,22 @@
+2020-12-16 10:53:16,449 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 11:43:50,364 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 11:44:29,790 [5] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and 1=1  and 1=1  and 1=1  LIMIT 0,10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogText(String account, String column, String action, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 77
+   at Practice.Services.OperateLogService.SelectLogText(String account, String column, String action, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 92
+2020-12-16 11:45:28,415 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 11:48:19,953 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 11:49:49,138 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 14:22:39,543 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 17:50:19,770 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 18:02:28,493 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-16 18:08:29,711 [1] INFO  PracticeApi.Program [(null)] - practice api init!

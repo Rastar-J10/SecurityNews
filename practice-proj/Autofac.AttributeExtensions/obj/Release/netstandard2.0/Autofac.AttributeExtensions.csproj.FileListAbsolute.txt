@@ -1,0 +1,9 @@
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\bin\Release\netstandard2.0\Autofac.AttributeExtensions.deps.json
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\bin\Release\netstandard2.0\Autofac.AttributeExtensions.dll
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\bin\Release\netstandard2.0\Autofac.AttributeExtensions.pdb
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.csprojAssemblyReference.cache
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.AssemblyInfoInputs.cache
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.AssemblyInfo.cs
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.csproj.CoreCompileInputs.cache
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.dll
+D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.pdb

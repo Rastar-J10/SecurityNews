@@ -1,0 +1,30 @@
+2020-12-07 09:19:52,574 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 10:42:01,836 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 15:03:53,936 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 15:05:47,440 [13] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Practice.ResponseModels.ResModel<System.Collections.Generic.List<object>>' to 'Practice.ResponseModels.ResModel<object>'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 195
+2020-12-07 15:09:56,399 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 15:10:19,930 [5] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Practice.ResponseModels.ResModel<System.Collections.Generic.List<object>>' to 'Practice.ResponseModels.ResModel<System.Collections.Generic.IEnumerable<object>>'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 195
+2020-12-07 15:14:56,060 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 15:17:50,305 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 16:32:12,441 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 18:35:05,736 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 18:42:53,868 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 18:53:02,945 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 18:55:01,677 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 18:56:31,458 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 18:57:34,098 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 18:59:23,525 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 19:00:29,925 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 19:04:24,172 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 19:06:06,557 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 19:07:17,855 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 19:07:53,091 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-07 19:14:08,043 [1] INFO  PracticeApi.Program [(null)] - practice api init!

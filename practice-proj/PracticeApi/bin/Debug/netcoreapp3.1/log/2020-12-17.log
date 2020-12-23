@@ -1,0 +1,384 @@
+2020-12-17 09:06:43,269 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 10:56:57,071 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 13:37:51,311 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 13:37:59,573 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 14:54:25,631 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 15:19:27,117 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 15:19:53,881 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 15:21:40,563 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 15:25:43,511 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:16:36,448 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:17:46,108 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:30:30,836 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:32:58,496 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:38:41,569 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:43:13,105 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:46:23,183 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 16:47:32,163 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 17:19:17,437 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 17:48:09,872 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-17 17:48:21,220 [10] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:21,581 [10] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:31,548 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:31,655 [10] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:36,385 [10] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:36,499 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:37,148 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:37,260 [10] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:37,545 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:37,648 [10] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:37,920 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:38,032 [10] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:38,301 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:38,479 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:38,676 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:38,805 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:39,592 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:39,739 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:40,500 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:40,619 [4] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:42,462 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:42,567 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:42,947 [4] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:43,047 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:43,477 [12] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:48:43,586 [9] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsDetailRepository.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsDetailRepository.cs:line 89
+   at Practice.Services.NewsDetailService.BackGroundPage(Int64 userId, Int32 status, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 128
+2020-12-17 17:50:26,008 [1] INFO  PracticeApi.Program [(null)] - practice api init!

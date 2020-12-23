@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../components\layuiadmin\layui\css\layui.css">
+    <link rel="stylesheet" href="../../components\layuiadmin\layui\css\font-awesome.min.css">
+    <script src="../../components\layuiadmin\layui\layui.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #warp {
+            width: 1900px;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            margin: 0 auto;
+        }
+
+        .input {
+            width: 400px;
+            height: 38px;
+            line-height: 1.3;
+            padding-left: 10px;
+            border-style: solid;
+            border-color: #e6e6e6;
+            border-radius: 2px;
+            background-color: rgb(253, 253, 253);
+            color: black;
+            margin-left: 90px;
+        }
+
+        .button {
+            width: 60px;
+            height: 42px;
+            border: 1px solid #e6e6e6;
+            color: white;
+            background-color: rgb(62, 119, 226);
+            padding-bottom: 5px;
+        }
+
+        .login-url {
+            margin-left: 100px;
+            font-size: 1.1em;
+        }
+
+        .register-url {
+            margin-left: 30px;
+            font-size: 1.1em;
+        }
+
+        #nickname {
+            margin-left: 60px;
+            font-size: 1.1px;
+        }
+
+        #category {
+            width: 1360px;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgb(45, 104, 182);
+            margin: 0 auto;
+        }
+
+        #category .layui-nav-item {
+            display: block;
+            width: 100px;
+            text-align: center;
+            float: left;
+            position: relative;
+            left: 190px;
+        }
+
+        .register {
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .layui-form-item {
+            width: 100%;
+            height: 55px;
+            line-height: 55px;
+        }
+
+        .layui-form-label {
+            width: 100px;
+            font-size: 1.3em;
+        }
+
+        .layui-form-item .layui-input-inline {
+            width: 65%
+        }
+
+        .layui-input-inline input {
+            width: 100%;
+        }
+
+        #footer {
+            width: 1360px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-top: 1px solid lightgray;
+            margin: 0 auto;
+            margin-top: 70px;
+        }
+    </style>
+    <title>用户注册</title>
+</head>
+
+<body>
+    <div class="warp">
+        <header id="header">
+            <img src="../images/u163.png" style="margin-left: 60px;">
+            <span style="margin-left: 5px;font-size: 22px;">安全教育平台 · 资讯</span>
+            <input type="text" name="title" id="title" required lay-verify="required" placeholder="请输入新闻标题" autocomplete="off"
+                class="input">
+            <button type="button" class="button"><i class="layui-icon layui-icon-search"
+                    style="font-size: 22px;"></i></button>
+            <a href="#" class="login-url">登录</a>
+            <a href="Register.html" class="register-url">注册</a>
+            <a href="../BackGround/Home.html" id="nickname" title="点击进入后台管理界面"></a>
+            <a href="#" style="margin-left: 30px;font-size: 1.1em;display: none;color: rgb(238, 83, 22);"
+                class="exit">退出</a>
+        </header>
+        <!-- 分类 -->
+        <ul id="category">
+            <li><a href="Home.html"
+                style="color: white;font-size: 1.1em;position: relative;left: 200px;display: block;text-align: center;float: left;width: 100px;">首页</a>
+        </li>
+        </ul>
+        <!-- 注册 -->
+        <div class="register">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">账号：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="account" lay-verify="account" autocomplete="off"
+                            placeholder="支持大小写英文和数字，长度最小为5，最大为12" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">昵称：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="nickname" lay-verify="nickname" autocomplete="off"
+                            placeholder="昵称支持任何字符，长度为2-20" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">创建密码：</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="password" lay-verify="password" autocomplete="off"
+                            placeholder="密码支持大小写字母和数字，长度为6-18位" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码：</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="repassword" lay-verify="repassword" autocomplete="off"
+                            placeholder="两次输入的密码需要一致" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">验证码：</label>
+                    <div class="layui-input-inline" style="width: 45%;">
+                        <input type="text" name="code" lay-verify="verifycode" autocomplete="off"
+                            placeholder="请输入验证码" class="layui-input">
+                    </div>
+                    <img width="150px" height="38px" style="margin-bottom: 22px;" id="img">
+                </div>
+                <div class="layui-input-block" style="display: none;">
+                    <input type="guid" name="guid" placeholder="请输入唯一参数" autocomplete="off" class="layui-input">
+                </div>
+                <button class="layui-btn" lay-submit lay-filter="formRegister"
+                    style="width: 52%;margin-left: 16%;margin-top: 10px;border-radius: 3px;height: 45px;line-height: 45px;background-color: rgb(45, 104, 182);">注册</button>
+            </form>
+        </div>
+        <!-- 底部信息 -->
+        <footer id="footer">
+            一切努力只为守护孩子成长
+        </footer>
+    </div>
+
+    <script>
+        Storage.prototype.getExpire = key => {
+            let val = localStorage.getItem(key);
+            if (!val) {
+                return val;
+            }
+            val = JSON.parse(val);
+            //判断时间是否超出设定时间
+            if (Date.now() - val.time > val.expire) {
+                localStorage.clear();
+                return null;
+            }
+            return val.data;
+        }
+        
+        layui.use(['jquery', 'layer', 'form'], function () {
+            var layer = layui.layer,
+                form = layui.form,
+                $ = layui.jquery;
+
+            $(".login-url").click(function () {
+                layer.alert('请前往首页登录', {
+                    skin: 'layui-layer-lan' //样式类名
+                    , closeBtn: 0
+                }, function () {
+                    window.location.href = "Home.html";
+                });
+            });
+
+            //生成验证码图片
+            function verifycode() {
+                $.ajax({
+                    url: localStorage.getItem('url')+"/VerifyCode/GenerateVerifyCode",
+                    dataType: "json",
+                    type: "get",
+                    success: function (res) {
+                        var item = res.data;
+                        console.log(item.imageBase64);
+                        $('#img').attr('src', item.imageBase64);
+                        $('input[name=guid]').attr('value', item.guid);
+                    }
+                });
+            };
+
+            //调用查询分类列表接口
+            $(function () {
+                verifycode();
+                //验证用户三天内是否登录过
+                if (localStorage.hasOwnProperty('name')) {
+                    console.log(localStorage.getExpire("name"));
+                    $('#header a').css("display", "none");
+                    $('#nickname').css("display","inline");
+                    $('#nickname').html('欢迎您，' + localStorage.getExpire("name"));
+                    $('.exit').css("display", "inline");
+                }
+                $.ajax({
+                    url: localStorage.getItem('url')+'/NewsCategory/SelectNewsCategory',
+                    dataType: 'json',
+                    type: 'get',
+                    success: function (res) {
+                        console.log(res.data);
+                        var category = ""; //定义变量存储
+                        for (const key in res.data) {
+                            category += '<li class="layui-nav-item">' + '<a href="CategoryList.html?id=' + res.data[key].id+ '"' + 'style="color: white;font-size: 1.1em;">' + res.data[key].name + '</a>' + '</li>'
+                            console.log(res.data[key].name)
+                        }
+                        $('#category').append(category);
+                    }
+                });
+            });
+
+            //搜索文章
+            $('.button').click(function(){
+                var title = $('#title').val();
+                window.location.href=encodeURI("SearchResult.html?title="+title);
+            });
+
+            //点击刷新验证码
+            $('#img').click(function () {
+                verifycode();
+            });
+
+            //自定义验证规则
+            form.verify({
+                account: function (value) {
+                    if (!/^[0-9a-zA-Z]{5,12}$/.test(value)) {
+                        return '账号格式有误，请重新输入'
+                    }
+                }
+                , nickname: function (value) {
+                    if (!/^.{2,20}$/.test(value)) {
+                        return '昵称长度要在2-20个字符之间'
+                    }
+                }
+                , password: [
+                    /^[0-9a-zA-Z]{6,18}$/
+                    , '密码必须6到18位，且不能出现空格'
+                ]
+                , repassword: function (value) {
+                    if (value != $("input[name='password']").val()) {
+                        return '两次输入的密码需要一致'
+                    }
+                }
+                , verifycode: [
+                    /^[0-9a-zA-Z]{4}$/
+                    , '验证码格式错误，请重新输入'
+                ]
+            });
+
+            //监听提交
+            form.on('submit(formRegister)', function (info) {
+                $.ajax({
+                    url: localStorage.getItem('url')+'/UserAccount/UserRegister',
+                    data: JSON.stringify(info.field),
+                    type: 'POST',
+                    contentType: 'application/json; charset=UTF-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        if (data.status) {
+                            layer.msg('注册成功，返回上一页', {icon: 6,time:3000},function(){
+                                history.go(-1);
+                            });
+                        }else{
+                            layer.msg(data.message,{icon:2,time:1000});
+                        }
+                    },
+                    error : function(e){
+                        console.log(e.status);
+                        console.log(e.message);
+                    }
+                });
+                console.log(info.field);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

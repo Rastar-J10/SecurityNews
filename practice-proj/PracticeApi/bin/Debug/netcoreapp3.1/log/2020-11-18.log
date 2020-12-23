@@ -1,0 +1,16 @@
+2020-11-18 09:05:28,318 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 09:49:11,248 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 09:50:51,188 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 09:51:11,169 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 10:00:06,223 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 10:03:27,532 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 17:55:06,176 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 17:55:46,771 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 17:57:03,525 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 17:58:06,911 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 18:50:23,885 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 18:51:41,438 [12] ERROR PracticeApi.Controllers.TestController [(null)] - 操作失败，请查看错误信息
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at PracticeApi.Controllers.ImageUploadController.ImageUpload(IFormFile file) in D:\bst-test\practice-proj\practice-proj\PracticeApi\Controllers\ImageUploadController.cs:line 52
+2020-11-18 18:53:48,508 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-18 18:54:35,381 [1] INFO  PracticeApi.Program [(null)] - practice api init!

@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Practice.IRepositories</name>
+    </assembly>
+    <members>
+        <member name="T:Practice.Entities.NewsCategoryEntity">
+            <summary>
+            新闻分类
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.Id">
+            <summary>
+            新闻分类ID
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.ParentId">
+            <summary>
+            新闻分类上级分类ID
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.Sort">
+            <summary>
+            新闻分类排序
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.AddTime">
+            <summary>
+            新闻分类添加时间
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.Operator">
+            <summary>
+            新闻分类最后操作人
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.OperateTime">
+            <summary>
+            新闻分类最后操作时间
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsCategoryEntity.Status">
+            <summary>
+            新闻分类状态
+            </summary>
+        </member>
+        <member name="T:Practice.Entities.NewsDetailEntity">
+            <summary>
+            新闻详情
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Id">
+            <summary>
+            新闻id
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Category1">
+            <summary>
+            新闻一级编号
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Category2">
+            <summary>
+            新闻二级编号
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Title">
+            <summary>
+            新闻标题
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Author">
+            <summary>
+            新闻作者
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Content">
+            <summary>
+            新闻内容
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Summary">
+            <summary>
+            新闻摘要
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Cover">
+            <summary>
+            新闻封面
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Cover2">
+            <summary>
+            新闻封面2
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Cover3">
+            <summary>
+            新闻封面3
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Tags">
+            <summary>
+            新闻标签
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Status">
+            <summary>
+            新闻状态
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.ReadNum">
+            <summary>
+            阅读数
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.PraiseNum">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.CommentCount">
+            <summary>
+            留言次数
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Recommend">
+            <summary>
+            是否推荐
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.RecommendSort">
+            <summary>
+            推荐排序
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Operator">
+            <summary>
+            最后操作人
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.OperateTime">
+            <summary>
+            最后操作时间
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.NewsDetailEntity.Count">
+            <summary>
+            数据总量
+            </summary>
+        </member>
+        <member name="T:Practice.Entities.OperateLogEntity">
+            <summary>
+            操作日志实体类
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.OperateLogEntity.Id">
+            <summary>
+            日志ID
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.OperateLogEntity.Column">
+            <summary>
+            操作栏目
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.OperateLogEntity.Action">
+            <summary>
+            操作功能
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.OperateLogEntity.InterfaceUrl">
+            <summary>
+            请求接口路径
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.OperateLogEntity.Operator">
+            <summary>
+            操作人
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.OperateLogEntity.OperateTime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="T:Practice.Entities.UserAccountEntity">
+            <summary>
+            用户帐号
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.UserAccountEntity.UserId">
+            <summary>
+            userId
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.UserAccountEntity.Account">
+            <summary>
+            帐号
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.UserAccountEntity.Nickname">
+            <summary>
+            昵称
+             </summary>
+        </member>
+        <member name="P:Practice.Entities.UserAccountEntity.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.UserAccountEntity.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.UserAccountEntity.Status">
+            <summary>
+            状态 0删除 1正常 2禁用
+            </summary>
+        </member>
+        <member name="T:Practice.Entities.VerifyCodeEntity">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.VerifyCodeEntity.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.VerifyCodeEntity.Randomcode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.VerifyCodeEntity.Guid">
+            <summary>
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.VerifyCodeEntity.Status">
+            <summary>
+            验证码的状态
+            </summary>
+        </member>
+        <member name="P:Practice.Entities.VerifyCodeEntity.Addtime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="T:Practice.Repositories.INewsCategoryRepository">
+            <summary>
+            新闻分类仓储接口
+            </summary>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.SelectCategory">
+            <summary>
+            查询新闻分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.IsCategoryName(System.String)">
+            <summary>
+            是否有同名分类
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.IsCategory">
+            <summary>
+            判断一级分类数量是否大于9
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.IsChild(System.Int64)">
+            <summary>
+            判断二级分类是否大于5
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.IsParentId(System.Int64)">
+            <summary>
+            判断是否有这个一级分类
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.Insert(System.String,System.Int64,System.Int32,System.Int64)">
+            <summary>
+            添加新闻分类
+            </summary>
+            <param name="name"></param>
+            <param name="parentId"></param>
+            <param name="sort"></param>
+            <param name="operateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.GetId(System.Int64)">
+            <summary>
+            查询该id返回的数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.Delete(System.Int64,System.Int64)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="id"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.Update(System.Int64,System.String,System.Int64,System.Int32,System.Int64)">
+            <summary>
+            修改新闻分类
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="parentId"></param>
+            <param name="sort"></param>
+            <param name="operateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.SelectCategoryList(System.Int32)">
+            <summary>
+            查询分类列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.SelectCategoryAll(System.Int32,System.Int32,System.String)">
+            <summary>
+            标题模糊查询
+            </summary>
+            <param name="name"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsCategoryRepository.RecommendSort(System.Int64,System.Int32,System.Int64)">
+            <summary>
+            推荐
+            </summary>
+            <param name="id"></param>
+            <param name="sort"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Repositories.INewsDetailRepository">
+            <summary>
+            新闻查询仓储接口
+            </summary>
+        </member>
+        <member name="M:Practice.Repositories.INewsDetailRepository.SelectDetailsTitle(System.String,System.Int32)">
+            <summary>
+            根据新闻标题查询
+            </summary>
+            <param name="title">新闻标题</param>
+            <param name="pageIndex">当前页</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsDetailRepository.SelectDetailsCategory(System.Int32,System.Int32)">
+            <summary>
+            根据新闻分类查询
+            </summary>
+            <param name="id">新闻分类ID</param>
+            <param name="pageIndex">当前页</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsDetailRepository.SelectDetailsContent(System.Int32,System.Int32)">
+            <summary>
+            查询新闻正文
+            </summary>
+            <param name="id">新闻ID</param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsDetailRepository.BackGroundPage(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            后台首页数据
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="status">新闻状态</param>
+            <param name="pageIndex">分页</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsDetailRepository.ClassifyRecommend(System.Int32)">
+            <summary>
+            分类推荐
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsDetailRepository.NewsReadNumIncrease(System.Int64)">
+            <summary>
+            新闻阅读量增加
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Repositories.INewsManagerRepository">
+            <summary>
+            新闻管理仓储接口
+            </summary>
+        </member>
+        <member name="M:Practice.Repositories.INewsManagerRepository.SelectNewsManager(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            新闻管理界面数据查询
+            </summary>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsManagerRepository.SelectNewsManagerTitle(System.String,System.Int32,System.Int64)">
+            <summary>
+            根据标题查询登录用户编辑的新闻
+            </summary>
+            <param name="title"></param>
+            <param name="pageIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsManagerRepository.Insert(Practice.Entities.NewsDetailEntity)">
+            <summary>
+            新建新闻
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsManagerRepository.State(System.Int64,System.Int32,System.Int64)">
+            <summary>
+            删除新闻
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.INewsManagerRepository.Update(Practice.Entities.NewsDetailEntity)">
+            <summary>
+            修改新闻
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Repositories.IOperateLogRepository">
+            <summary>
+            操作日志仓储接口
+            </summary>
+        </member>
+        <member name="M:Practice.Repositories.IOperateLogRepository.Insert(System.String,System.String,System.String,System.Int64)">
+            <summary>
+            添加操作日志
+            </summary>
+            <param name="column"></param>
+            <param name="action"></param>
+            <param name="url"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IOperateLogRepository.SelectLogTime(System.String,System.Int32,System.Int32)">
+            <summary>
+            按时间查询操作日志
+            </summary>
+            <param name="operateTime"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IOperateLogRepository.SelectLogText(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            多条件查询
+            </summary>
+            <param name="account"></param>
+            <param name="column"></param>
+            <param name="action"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IOperateLogRepository.CategoryEdit(System.Int64,System.Int32)">
+            <summary>
+            分类修改记录查询
+            </summary>
+            <param name="id"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Repositories.ITestRepository">
+            <summary>
+            测试仓储接口
+            </summary>
+        </member>
+        <member name="M:Practice.Repositories.ITestRepository.Get(System.Int64)">
+            <summary>
+            取值
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Repositories.IUserAccountRepository">
+            <summary>
+            用户账户仓储接口
+            </summary>
+        </member>
+        <member name="M:Practice.Repositories.IUserAccountRepository.Login(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="account">账号</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IUserAccountRepository.IsAccount(System.String)">
+            <summary>
+            账号是否重复
+            </summary>
+            <param name="account">账户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IUserAccountRepository.Register(Practice.Entities.UserAccountEntity)">
+            <summary>
+            注册
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Repositories.IVerifyCodeRepository">
+            <summary>
+            验证码仓储接口
+            </summary>
+        </member>
+        <member name="M:Practice.Repositories.IVerifyCodeRepository.Insert(System.String,System.String)">
+            <summary>
+            将验证码添加到数据库
+            </summary>
+            <param name="code">验证码</param>
+            <param name="guid">唯一参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IVerifyCodeRepository.IsExist(System.String)">
+            <summary>
+            判断是否有相同的guid
+            </summary>
+            <param name="guid">唯一参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IVerifyCodeRepository.UpdateStatus(System.Int64,System.Int32)">
+            <summary>
+            更改验证码状态
+            </summary>
+            <param name="id">验证码</param>
+            <param name="status">验证码状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Repositories.IVerifyCodeRepository.GetVerify(System.String,System.String)">
+            <summary>
+            查询验证码
+            </summary>
+            <param name="code"></param>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

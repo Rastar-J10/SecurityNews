@@ -1,0 +1,154 @@
+2020-12-11 09:06:45,478 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 10:16:58,857 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 10:26:20,131 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 10:34:10,421 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 11:09:33,671 [30] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'summary' cannot be null
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 678
+   at Practice.Repositories.NewsManagerRepository.Insert(NewsDetailEntity entity) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsManagerRepository.cs:line 78
+   at Practice.Services.NewsManagerService.Insert(ReqNewsDetailModel model, Int32 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsManagerService.cs:line 131
+2020-12-11 11:13:08,429 [31] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'summary' cannot be null
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 678
+   at Practice.Repositories.NewsManagerRepository.Insert(NewsDetailEntity entity) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsManagerRepository.cs:line 78
+   at Practice.Services.NewsManagerService.Insert(ReqNewsDetailModel model, Int32 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsManagerService.cs:line 131
+2020-12-11 11:15:00,592 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 11:30:29,646 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 11:34:34,951 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 13:58:10,180 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 14:01:31,996 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 14:05:58,626 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 14:33:27,454 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 14:33:40,014 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 15:12:43,917 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 15:13:59,586 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 15:32:01,658 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 15:38:59,819 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 17:38:24,478 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 17:40:05,547 [12] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:40:13,078 [13] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:40:15,326 [14] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:40:15,567 [12] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:40:15,788 [13] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:40:16,165 [15] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:40:16,178 [17] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:40:16,358 [14] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'practice.news_details' doesn't exist
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 184
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 214
+2020-12-11 17:41:28,837 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 17:47:02,941 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-11 17:50:58,596 [1] INFO  PracticeApi.Program [(null)] - practice api init!

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../components/layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
+    <script src="../../components/layuiadmin/layui/layui.js"></script>
+    <script src="../../components/tinymce/js/tinymce/tinymce.min.js"></script>
+    <title>新建新闻</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #warp {
+            width: 1750px;
+            height: auto;
+            background-color: rgb(248, 248, 248);
+            padding-bottom: 60px;
+        }
+
+        .layui-nav * {
+            font-size: 15px;
+        }
+
+        #header {
+            margin-left: 200px;
+            width: 1550px;
+            height: 120px;
+            line-height: 120px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+
+        #header .title {
+            margin-left: 30px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #header .user {
+            height: 120px;
+            text-align: center;
+        }
+
+        #content {
+            width: 1350px;
+            height: 1470px;
+            margin-top: 30px;
+            margin-left: 290px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .layui-form-lable {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .item1 input[type='text'] {
+            width: 200px;
+            padding-left: 15px;
+            border: 1px solid lightgray;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .inline1 {
+            display: inline-block;
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+
+        .inline2 {
+            display: inline-block;
+            margin-left: 42%;
+        }
+
+        .tips {
+            display: inline-block;
+            width: 300px;
+            color: rgb(112, 112, 112);
+            font-size: 12px;
+            line-height: 20px;
+            position: relative;
+            top: 20px;
+            left: 70%;
+        }
+
+        .item2 {
+            position: relative;
+            bottom: 10px;
+        }
+
+        .item3,
+        .item4 {
+            margin-top: 40px;
+            margin-left: 25px;
+        }
+
+        .line {
+            width: 90%;
+            padding-left: 15px;
+            border: none;
+            border-bottom: 1px solid lightgray;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .item5 {
+            margin-top: 40px;
+            margin-left: 25px;
+            width: 95%;
+        }
+
+        .item6 {
+            margin-top: 40px;
+            margin-left: 25px;
+            width: 95%;
+        }
+
+        .item7 {
+            margin-top: 40px;
+            margin-left: 25px;
+            width: 95%;
+        }
+
+        .item8 {
+            margin-top: 40px;
+            margin-left: 25px;
+            width: 95%;
+            text-align: right;
+        }
+
+        .submit {
+            width: 150px;
+            height: 50px;
+            line-height: 30px;
+            background-color: rgb(33, 152, 226);
+            color: white;
+            border: none;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .reset {
+            width: 80px;
+            height: 50px;
+            line-height: 30px;
+            background-color: white;
+            color: black;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            margin-right: 20px;
+        }
+
+        .curtain {
+            width: 270px;
+            height: 130px;
+            background-color: black;
+            opacity: 0.7;
+            position: relative;
+            bottom: 130px;
+            display: none;
+        }
+
+        .curtain2 {
+            width: 270px;
+            height: 130px;
+            background-color: black;
+            opacity: 0;
+            display: inline-block;
+            position: relative;
+            right: 274px;
+        }
+
+        .curtain3 {
+            width: 270px;
+            height: 130px;
+            background-color: black;
+            opacity: 0;
+            display: inline-block;
+            position: relative;
+            right: 274px;
+        }
+
+        #tailoring {
+            width: 1200px;
+            height: 550px;
+            margin-top: 60px;
+            margin-left: 365px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="warp">
+        <div class="layui-side layui-bg-black">
+            <div title="菜单缩放" class="kit-side-fold" style="text-align: center;"><i class="fa fa-navicon fa-lg"
+                    aria-hidden="true"></i></div>
+            <ul class="layui-nav layui-nav-tree layui-bg-cyan layui-inline" lay-filter="">
+                <li class="layui-nav-item"><a href="Home.html"><i class="fa fa-home"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>首页</span></a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-folder"></i>&nbsp;&nbsp;<span>新闻管理</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="NewsManager.html"><i class="fa fa-file"></i>&nbsp;&nbsp;<span>新闻管理</span></a></dd>
+                        <dd><a href="NewArticles.html"><i class="fa fa-plus-square-o"
+                                    aria-hidden="true"></i>&nbsp;&nbsp;<span>新建新闻</span></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="CategoryManager.html"><i
+                            class="fa fa-server"></i>&nbsp;&nbsp;<span>分类管理</span></a></li>
+                <li class="layui-nav-item"><a href="OperateLog.html"><i class="fa fa-pencil-square"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>操作日志</span></a></li>
+                <li class="layui-nav-item"><a href="../home/Home.html"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>退出后台</span></a></li>
+            </ul>
+        </div>
+        <header id="header" class="layui-row">
+            <div class="layui-col-md10">
+                <span class="title">新闻管理后台</span>
+            </div>
+            <div class="user layui-col-md2">
+                <img src="../images/u163.png" width="60px" height="60px" style="border-radius: 30px;">
+                <span
+                    style="font-size: 18px;font-weight: bold;position: relative;left: 4%;bottom: 5%;">百师通教育&nbsp;&nbsp;<i
+                        class="fa fa-caret-down fa-lg"></i></span>
+                <span style="position:relative;top: 14%;right: 38%;" class="nickname">李晓阳</span>
+            </div>
+        </header>
+        <div id="content">
+            <form action="" class="layui-form" method="POST">
+                <div class="layui-form-item item1">
+                    <div class="inline1">
+                        <label for="author" class="layui-form-lable">作者：&nbsp;&nbsp;</label>
+                        <input type="text" name="author" id="author" lay-verify="author" autocomplete="off"
+                            placeholder="请输入作者">
+                    </div>
+                    <div class="inline2">
+                        <label for="tags" class="layui-form-lable">标签：&nbsp;&nbsp;</label>
+                        <input type="text" name="tags" id="tags" lay-verify="tags" autocomplete="off"
+                            placeholder="请输入标签" style="width: 300px;">
+                    </div><br>
+                    <span class="tips">您可添加5个标签，每个标签不超过四个字，标签之间使用(中文)，分隔。描述越准确，越利于触达兴趣人群</span>
+                </div>
+                <div class="item2" style="width: 40%;" class="layui-item">
+                    <label for="category2" class="layui-form-lable">文章分类：</label>
+                    <div class="layui-input-inline">
+                        <select name="category2" class="cate" aria-placeholder="请选择分类" id="category"
+                            style="width: 340px;height: 30px;line-height: 30px;border: 1px solid lightgray;">
+                            <option value="0" disabled>请选择</option>
+                        </select>
+                    </div>
+                    <input type="text" name="category1" value="0" style="display: none;">
+                </div>
+                <div class="item3">
+                    <label for="title" class="layui-form-lable">标题：&nbsp;&nbsp;</label>
+                    <input type="text" name="title" id="title" lay-verify="title" autocomplete="off" placeholder="请输入标题"
+                        class="line">
+                </div>
+                <div class="item4">
+                    <label for="summary" class="layui-form-lable">摘要：&nbsp;&nbsp;</label>
+                    <input type="summary" name="summary" id="summary" lay-verify="summary" autocomplete="off"
+                        placeholder="请输入摘要" class="line">
+                </div>
+                <div class="item5">
+                    <span
+                        style="color: gray;margin-left: 630px;">Tips：如果文章正文中有视频或音频需要点击预览按钮(工具栏的最右侧眼睛形状)才可以正确查看文章效果</span>
+                    <textarea id="mytextarea" name="content" maxlength="10000"></textarea>
+                </div>
+                <div class="item6">
+                    <button type="button" class="layui-btn" id="upload1"
+                        name="cover">上传封面图</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;必填，用于信息推荐的封面图展现，支持jpg，png，大小不超过5M的图片
+                    <input type="text" name="cover" id="cover" style="display: none;" lay-verify="cover">
+                    <div class="layui-upload-list" style="width: 270px;height: 130px;">
+                        <img class="layui-upload-img" id="img1" width="270" height="130">
+                        <div class="curtain"></div>
+                        <span><i class="fa fa-pencil-square-o edit" aria-hidden="true"
+                                style="font-size: 24px;position: relative;bottom: 205px;left: 90px;color: white;"></i></span>
+                        <span><i class="fa fa-trash remove" aria-hidden="true"
+                                style="font-size: 24px;position: relative;bottom: 207px;left: 130px;color: white;"></i></span>
+                    </div>
+                </div>
+                <div class="item7">
+                    <button type="button" class="layui-btn"
+                        id="upload2">上传信息流推荐图</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选填，用于首页信息流的文章展现，支持jpg，png，大小不超过5M的图片
+                    <input type="text" name="cover2" id="cover2" style="display: none;">
+                    <input type="text" name="cover3" id="cover3" style="display: none;">
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" style="width: 100%;height: 130px;">
+                            <img class="layui-upload-img" id="img2" width="270" height="130"
+                                style="margin-left: 15px;position:relative;bottom: 60px;">
+                            <div class="curtain2"></div>
+                            <span><i class="fa fa-pencil-square-o edit2" aria-hidden="true"
+                                    style="font-size: 24px;position: relative;right: 460px;bottom:55px;color: white;opacity: 0;"></i></span>
+                            <span><i class="fa fa-trash remove2" aria-hidden="true"
+                                    style="font-size: 24px;position: relative;right: 420px;bottom:55px;color: white;opacity: 0;"></i></span>
+                            <img class="layui-upload-img" id="img3" width="270" height="130"
+                                style="margin-left: 45px;position: relative;bottom: 62px;right: 300px;">
+                            <div class="curtain3" style="position: relative;right: 575px;opacity: 0;"></div>
+                            <span><i class="fa fa-pencil-square-o edit3" aria-hidden="true"
+                                    style="font-size: 24px;position: relative;right: 760px;bottom:55px;color: white;opacity: 0;"></i></span>
+                            <span><i class="fa fa-trash remove3" aria-hidden="true"
+                                    style="font-size: 24px;position: relative;bottom: 138px;left: 515px;color: white;opacity: 0;"></i></span>
+                        </div>
+                    </blockquote>
+                </div>
+                <div class="item8">
+                    <input type="text" name="creatorId" id="creatorId" value="0" style="display: none;">
+                    <input type="text" name="operator" id="operator" value="0" style="display: none;">
+                    <button type="reset" class="reset">取消</button>
+                    <button type="button" lay-submit lay-filter="newsAdd" class="submit">保存为草稿</button>
+                </div>
+            </form>
+        </div>
+        <!-- 封面图裁剪 -->
+        <div id="tailoring">
+            <p style="text-align: center;padding-top: 25px;font-weight: bold;font-size: 18px;">单图封面图片裁剪</p>
+            <div class="layui-row" style="margin-top: 50px;">
+                <div class="layui-col-md5" style="text-align: center;">
+                    <p style="font-size: 19px;text-align: center;">封面展示区域</p>
+                    <img width="70%" height="290px" style="margin-top: 30px;" class="tail1" id="clip">
+                </div>
+                <div class="layui-col-md7">
+                    <img src="" alt="" width="200px" height="80px" class="tail1">
+                    <span style="font-size: 20px;position: relative;bottom: 27px;left: 10px;">图文封面（690*300）</span>
+                    <span style="font-size: 18px;color: gray;position: relative;top: 20px;right: 187px;">信息流列表展示图</span>
+                    <br>
+                    <img src="" alt="" width="200px" height="220px" class="tail1"
+                        style="margin-top: 30px;object-fit: cover;">
+                    <span style="font-size: 20px;position: relative;bottom: 74px;left: 10px;">转发封面（112*112）</span>
+                    <span
+                        style="font-size: 18px;color: gray;position: relative;bottom: 10px;right: 187px;">发送给朋友、分享到微信或朋友圈，</span>
+                    <span
+                        style="font-size: 18px;color: gray;position: relative;bottom: 120px;left: 210px;">用户将看到此封面</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        Storage.prototype.getExpire = key => {
+            let val = localStorage.getItem(key);
+            if (!val) {
+                return val;
+            }
+            val = JSON.parse(val);
+            //判断时间是否超出设定时间
+            if (Date.now() - val.time > val.expire) {
+                localStorage.clear();
+                return null;
+            }
+            return val.data;
+        }
+
+        //文本编辑器
+        tinymce.init({
+            selector: '#mytextarea',
+            height: 500,
+            branding: false,
+            content_style: "img {max-width:100%;}",
+            language: 'zh_CN',
+            plugins: 'code link image table fullscreen preview formatpainter axupimgs imagetools charmap emoticons hr ax_wordlimit media',
+            menubar: false,
+            media_live_embeds: true,
+            file_picker_types: 'media',
+            file_picker_callback: function (cb, value, meta) {
+                //当点击meidia图标上传时,判断meta.filetype == 'media'有必要，因为file_picker_callback是media(媒体)、image(图片)、file(文件)的共同入口
+                if (meta.filetype == 'media') {
+                    //创建一个隐藏的type=file的文件选择input
+                    let input = document.createElement('input');
+                    input.setAttribute('type', 'file');
+                    input.onchange = function () {
+                        let file = this.files[0];
+                        var xhr, formData;
+                        xhr = new XMLHttpRequest();
+                        xhr.open('POST', localStorage.getItem('url') + '/FileUpload/MediaUpload');
+                        xhr.withCredentials = self.credentials;
+                        xhr.setRequestHeader("Authorization", localStorage.getExpire('token')); //定义请求头带给后端
+                        xhr.upload.onprogress = function (e) {
+                            let percent = e.loaded / e.total * 100;
+                            if (percent < 100) {
+                                tinymce.activeEditor.setProgressState(true);//是否显示loading状态：1（显示）0（隐藏）
+                            } else {
+                                tinymce.activeEditor.setProgressState(false);
+                            }
+                        };
+                        xhr.onerror = function () {
+                            //根据自己的需要添加代码
+                            console.log(xhr.status);
+                            return;
+                        };
+                        xhr.onload = function () {
+                            let json;
+                            if (xhr.status < 200 || xhr.status >= 300) {
+                                console.log('HTTP 错误: ' + xhr.status);
+                                return;
+                            }
+                            //接口返回的数据
+                            json = JSON.parse(xhr.responseText);
+                            if (json.status) {
+                                //接口返回的文件保存地址
+                                let mediaLocation = json.data;
+                                //cb()回调函数，将mediaLocation显示在弹框输入框中
+                                cb(mediaLocation, { title: file.name });
+                            } else {
+                                alert('上传的文件格式需要是：.avi,.mp4,.mpg,.mpeg,.mp3,.wav');
+                                return;
+                            }
+                        };
+                        formData = new FormData();
+                        //假设接口接收参数为file,值为选中的文件
+                        formData.append('file', file);
+                        //正式使用将下面被注释的内容恢复
+                        xhr.send(formData);
+                    }
+                    //触发点击
+                    input.click();
+                }
+            },
+            toolbar: 'undo redo | forecolor backcolor bold italic underline strikethrough | alignleft aligncenter alignright alignjustify outdent indent |styleselect fontselect fontsizeselect | charmap emoticons hr |link image media table fullscreen preview formatpainter',
+            ax_wordlimit_num: 10000,
+            ax_wordlimit_callback: function (editor, txt, num) {
+                tipsJS('当前字数：' + txt.length + '，限制字数：' + num);
+            },
+            images_upload_handler: function (blobInfo, succFun, failFun) {
+                var formData;
+                var file = blobInfo.blob();//转化为易于理解的file对象
+                xhr = new XMLHttpRequest();
+                xhr.withCredentials = false;
+                xhr.open('POST', localStorage.getItem('url') + '/FileUpload/ImageUpload');
+                xhr.setRequestHeader("Authorization", localStorage.getExpire('token')); //定义请求头带给后端
+                xhr.onload = function () {
+                    var json;
+                    if (xhr.status != 200) {
+                        failFun('HTTP Error: ' + xhr.status);
+                        return;
+                    }
+                    json = JSON.parse(xhr.responseText);
+                    succFun(json.data);
+                };
+                formData = new FormData();
+                formData.append('file', file, file.name)
+                xhr.send(formData);
+            }
+        });
+
+        //JavaScript代码区域
+        layui.use(['element', 'jquery', 'layer', 'upload', 'form'], function () {
+            var element = layui.element
+                , layer = layui.layer
+                , upload = layui.upload
+                , form = layui.form
+                , $ = layui.jquery;
+
+            var isShow = true;  //定义一个标志位
+            $('.kit-side-fold').click(function () {
+                //选择出所有的span，并判断是不是hidden
+                $('.layui-nav-item span').each(function () {
+                    if ($(this).is(':hidden')) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+                //判断isshow的状态
+                if (isShow) {
+                    $('.layui-side.layui-bg-black').width(60); //设置宽度
+                    $('.kit-side-fold i').css('margin-right', '5%');  //修改图标的位置
+                    //将footer和body的宽度修改
+                    $('.layui-body').css('left', 60 + 'px');
+                    $('.layui-footer').css('left', 60 + 'px');
+                    //将二级导航栏隐藏
+                    $('dd span').each(function () {
+                        $(this).hide();
+                    });
+                    //修改标志位
+                    isShow = false;
+                } else {
+                    $('.layui-side.layui-bg-black').width(200);
+                    $('.kit-side-fold i').css('margin-right', '10%');
+                    $('.layui-body').css('left', 200 + 'px');
+                    $('.layui-footer').css('left', 200 + 'px');
+                    $('dd span').each(function () {
+                        $(this).show();
+                    });
+                    isShow = true;
+                }
+            });
+
+            //页面加载时所需函数
+            $(function () {
+                //验证用户三天内是否登录过
+                if (localStorage.hasOwnProperty('name')) {
+                    $('.nickname').html(localStorage.getExpire("name"));
+                }
+                $.ajax({
+                    url: localStorage.getItem('url') + '/NewsCategory/SelectNewsCategory',
+                    headers: { 'Authorization': localStorage.getExpire('token') },
+                    dataType: 'json',
+                    method: 'get',
+                    success: function (res) {
+                        var content = "";
+                        if (res.status) {
+                            for (const key in res.data) {
+                                content += '<option value="' + res.data[key].id + '">' + res.data[key].name + '</option>';
+                            }
+                            $('.cate').append(content);
+                            layui.form.render('select');
+                        } else {
+                            layer.msg(res.message, { icon: 2, time: 1200, offset: "240px" });
+                        }
+                    }
+                });
+            });
+
+            //悬浮遮罩
+            $("#img1").mouseover(function () {
+                $('.curtain').css("display", "block");
+                $('.edit').css("display", "inline");
+                $('.remove').css("display", "inline");
+            });
+            $('.curtain').mouseout(function () {
+                $('.curtain').css("display", "none");
+                $('.edit').css("display", "none");
+                $('.remove').css("display", "none");
+            });
+
+            $(".curtain2").mouseover(function () {
+                $('.curtain2').css("opacity", 0.7);
+                $('.edit2').css("opacity", 1);
+                $('.remove2').css("opacity", 1);
+            });
+            $('.curtain2').mouseout(function () {
+                $('.curtain2').css("opacity", 0);
+                $('.edit2').css("opacity", 0);
+                $('.remove2').css("opacity", 0);
+            });
+
+            $(".curtain3").mouseover(function () {
+                $('.curtain3').css("opacity", 0.7);
+                $('.edit3').css("opacity", 1);
+                $('.remove3').css("opacity", 1);
+            });
+            $('.curtain3').mouseout(function () {
+                $('.curtain3').css("opacity", 0);
+                $('.edit3').css("opacity", 0);
+                $('.remove3').css("opacity", 0);
+            });
+
+            //删除
+            $('.remove').click(function () {
+                $('#img1').removeAttr("src");
+                $('#cover').val("");
+                layer.msg('封面图已删除，请重新选择图片上传', { icon: 0, time: 1500 });
+            });
+            $('.remove2').click(function () {
+                $('#img2').removeAttr("src");
+                $('#cover2').val("");
+                layer.msg('推荐图1已删除', { icon: 1, time: 1500 });
+            });
+            $('.remove3').click(function () {
+                $('#img3').removeAttr("src");
+                $('#cover3').val("");
+                layer.msg('推荐图2已删除', { icon: 1, time: 1500 });
+            });
+
+            //普通图片上传
+            var uploadInst = upload.render({
+                elem: '#upload1'
+                , url: localStorage.getItem('url') + '/FileUpload/ImageUpload'
+                , headers: { 'Authorization': localStorage.getExpire('token') }
+                , before: function (obj) {
+                    //预读本地文件示例
+                    obj.preview(function (index, file, result) {
+                        $('#img1').attr('src', result); //图片链接
+                        $('.tail1').attr('src', result);
+                    });
+                }
+                , done: function (res) {
+                    if (res.status) {
+                        layer.msg('图片上传成功', { icon: 1, time: 1300 });
+                        $('#cover').val(res.data);
+                    }
+                    //上传成功
+                }
+                , error: function () {
+                    //演示失败状态，并实现重传
+                    layer.msg('上传失败，请重试', { icon: 2 })
+                }
+            });
+
+            //多图片上传
+            upload.render({
+                elem: '#upload2'
+                , url: localStorage.getItem('url') + '/FileUpload/ImageUpload'
+                , headers: { 'Authorization': localStorage.getExpire('token') }
+                , multiple: true //开启多图上传这个是重点
+                , accept: 'images'// 允许上传的文件类型
+                , size: 5120//允许大小，最大5M
+                , auto: true
+                , before: function (obj) {
+                    if ($('#cover2').val() != "" && $('#cover2').val() != undefined && $('#cover3').val() != "" && $('#cover3').val() != undefined) {
+                        layer.msg('只需要上传两张信息流推荐图就够了哦~', { icon: 4, time: 1300 });
+                        return false;
+                    }
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function (index, file, result) {
+                        if ($('#cover2').val() == "" || $('#cover2').val() == undefined) {
+                            $("#img2").attr("src", result);
+                        } else if ($('#cover3').val() == "" || $('#cover3').val() == undefined) {
+                            $("#img3").attr("src", result);
+                        }
+                    });
+                }
+                , done: function (res) {
+                    if (res.status) {
+                        if ($('#cover2').val() == "" || $('#cover2').val() == undefined) {
+                            $('#cover2').val(res.data);
+                            layer.msg('图片上传成功', { icon: 1, time: 1300 });
+                        } else if ($('#cover3').val() == "" || $('#cover3').val() == undefined) {
+                            $('#cover3').val(res.data);
+                            layer.msg('图片上传成功', { icon: 1, time: 1300 });
+                        }
+                    } else {
+                        layer.msg(res.message, { icon: 2 });
+                    }
+                }
+                , error: function () {
+                    //演示失败状态，并实现重传
+                    layer.msg('上传失败，请重试', { icon: 2, time: 1300 })
+                }
+            });
+
+            //自定义验证规则
+            form.verify({
+                title: function (value) {
+                    if (!/^.{1,30}$/.test(value)) {
+                        return '标题长度要在1-30个字符之间'
+                    }
+                }
+                , author: function (value) {
+                    if (!/^.{1,8}$/.test(value)) {
+                        return '作者名称长度要在1-8个字符之间'
+                    }
+                }
+                , cover: function (value) {
+                    if (value == "" || value == undefined) {
+                        return '封面图不能为空，请上传封面图';
+                    }
+                }, tags: function (value) {
+                    if (value == "" || value == undefined) {
+                        return '标签不能为空，请输入你意向的标签哦~';
+                    }
+                }
+            });
+
+            form.on('submit(newsAdd)', function (info) {
+                var area = tinyMCE.get('mytextarea').getContent();//正文
+                if (area == "" || area == undefined) {
+                    layer.msg('新闻正文不能为空哦~', { icon: 0 });
+                    return false;
+                }
+                console.log(info);
+                info.field.content = area;
+                delete info.field.file;
+                //调用添加接口
+                $.ajax({
+                    url: localStorage.getItem('url') + '/NewsManager/NewsArticle',
+                    headers: { 'Authorization': localStorage.getExpire('token') },
+                    data: JSON.stringify(info.field),
+                    type: 'POST',
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res.status) {
+                            layer.msg(res.message, { icon: 6, time: 1200, offset: "240px" }, function () {
+                                //跳转到后台首页
+                                window.location.href = "Home.html";
+                            });
+                        } else {
+                            layer.msg(res.message, { icon: 2, time: 1200, offset: "240px" });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

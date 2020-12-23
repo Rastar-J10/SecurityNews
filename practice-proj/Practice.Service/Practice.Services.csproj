@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Practice</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>obj\Debug\netcoreapp3.1\Practice.Services.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autofac.AttributeExtensions\Autofac.AttributeExtensions.csproj" />
+    <ProjectReference Include="..\Practice.Common\Practice.Common.csproj" />
+    <ProjectReference Include="..\Practice.IRepositories\Practice.IRepositories.csproj" />
+    <ProjectReference Include="..\Practice.IServices\Practice.IServices.csproj" />
+  </ItemGroup>
+
+</Project>

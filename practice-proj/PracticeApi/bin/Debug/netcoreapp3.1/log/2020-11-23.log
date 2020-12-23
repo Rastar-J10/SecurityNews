@@ -1,0 +1,15 @@
+2020-11-23 14:38:32,120 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 14:44:04,453 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 14:51:14,702 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 14:59:43,125 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 17:07:08,737 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 18:20:27,403 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 18:31:53,320 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 18:43:18,385 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 19:21:24,689 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 19:25:54,645 [20] ERROR Practice.Services.NewsArticlesService [(null)] - 新建新闻发生异常
+System.ArgumentOutOfRangeException: Index and length must refer to a location within the string. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at Practice.Services.NewsArticlesService.Insert(ReqNewsModel model, Int32 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsArticlesService.cs:line 56
+2020-11-23 19:26:37,740 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-23 19:35:00,559 [1] INFO  PracticeApi.Program [(null)] - practice api init!

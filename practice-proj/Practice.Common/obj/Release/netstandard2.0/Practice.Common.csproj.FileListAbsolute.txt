@@ -1,0 +1,9 @@
+D:\bst-test\practice-proj\Practice.Common\bin\Release\netstandard2.0\Practice.Common.deps.json
+D:\bst-test\practice-proj\Practice.Common\bin\Release\netstandard2.0\Practice.Common.dll
+D:\bst-test\practice-proj\Practice.Common\bin\Release\netstandard2.0\Practice.Common.pdb
+D:\bst-test\practice-proj\Practice.Common\obj\Release\netstandard2.0\Practice.Common.csprojAssemblyReference.cache
+D:\bst-test\practice-proj\Practice.Common\obj\Release\netstandard2.0\Practice.Common.AssemblyInfoInputs.cache
+D:\bst-test\practice-proj\Practice.Common\obj\Release\netstandard2.0\Practice.Common.AssemblyInfo.cs
+D:\bst-test\practice-proj\Practice.Common\obj\Release\netstandard2.0\Practice.Common.csproj.CoreCompileInputs.cache
+D:\bst-test\practice-proj\Practice.Common\obj\Release\netstandard2.0\Practice.Common.dll
+D:\bst-test\practice-proj\Practice.Common\obj\Release\netstandard2.0\Practice.Common.pdb

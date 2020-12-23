@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../components/layui-v2.5.7/layui/css/layui.css">
+    <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
+    <script src="../../components/layui-v2.5.7/layui/layui.js"></script>
+    <title>分类管理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #warp {
+            width: 1750px;
+            background-color: rgb(248, 248, 248);
+            padding-bottom: 50px;
+        }
+
+        .layui-nav * {
+            font-size: 15px;
+        }
+
+        #header {
+            margin-left: 200px;
+            width: 1550px;
+            height: 120px;
+            line-height: 120px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+
+        #header .title {
+            margin-left: 30px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #header .user {
+            height: 120px;
+            text-align: center;
+        }
+
+        #content {
+            width: 1350px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 290px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+            padding-bottom: 30px;
+        }
+
+        #content .header {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+        }
+
+        .category1,
+        .category2 {
+            width: 150px;
+            height: 38px;
+            margin-left: 15px;
+        }
+
+        .category1 {
+            margin-left: 35px;
+        }
+
+        .add,
+        .edit,
+        .remove {
+            width: 75px;
+            height: 37px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            background-color: rgb(11, 184, 34);
+            border: none;
+            border-radius: 5px;
+        }
+
+        .add {
+            margin-left: 75px;
+        }
+
+        .recommend {
+            width: 75px;
+            height: 37px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            background-color: rgb(36, 149, 219);
+            border: none;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        .keyword {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 20px;
+            font-size: 13px;
+            padding-left: 10px;
+            margin-left: 190px;
+            border: 1px solid rgb(19, 169, 214);
+        }
+
+        #search {
+            font-size: 20px;
+            color: rgb(170, 170, 170);
+            position: relative;
+            right: 30px;
+        }
+
+        #content .info {
+            width: 1250px;
+            margin: 0 auto;
+        }
+
+        .layui-table-cell {
+            height: 50px !important;
+            line-height: 50px;
+        }
+
+        /* 添加分类 */
+        #add {
+            width: 360px;
+            height: 190px;
+            display: none;
+        }
+
+        #add form {
+            width: 100%;
+            height: 100%;
+        }
+
+        .layui-form-item {
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        /* 编辑分类 */
+        #edit {
+            width: 630px;
+            height: 450px;
+            display: none;
+            padding-bottom: 130px;
+        }
+
+        /* 推荐值 */
+        #sort {
+            width: 450px;
+            height: 160px;
+            display: none;
+        }
+
+        .layui-form-item .layui-table-view {
+            width: 465px;
+            margin-left: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="add">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">父级分类</label>
+                <div class="layui-input-block" lay-filter="selectDiv">
+                    <select name="parentId" lay-verify="required" class="parent" lay-filter="">
+                        <option value="0">不选择则为添加父级分类</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="name|required" placeholder="输入分类名称"
+                        autocomplete="off" class="layui-input">
+                    <input type="text" name="sort" value="0" style="display: none;">
+                </div>
+            </div>
+            <button class="layui-btn" lay-submit lay-filter="formadd"
+                style="width: 30%;margin-left: 70px;margin-top: 10px;border-radius: 5px;">提交</button>
+            <button class="layui-btn layui-btn-primary cancel"
+                style="width: 30%;margin-left: 15px;margin-top: 10px;border-radius: 5px;" type="button">取消</button>
+        </form>
+    </div>
+
+    <div id="edit">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类ID</label>
+                <div class="layui-input-block" lay-filter="">
+                    <input type="text" name="id" required autocomplete="off" class="layui-input categoryid" readonly>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">更改分类</label>
+                <div class="layui-input-block" lay-filter="selectDiv">
+                    <select name="parentId" lay-verify="required" class="parent" lay-filter="">
+                        <option value="0">不选择则为修改成一级分类</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="name|required" placeholder="输入分类名称"
+                        autocomplete="off" class="layui-input ename">
+                    <input type="text" name="sort" value="0" style="display: none;">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">编辑记录</label>
+                <table id="editRecord" lay-filter="editRecord"></table>
+            </div>
+            <button class="layui-btn" lay-submit lay-filter="formedit"
+                style="width: 30%;margin-left: 140px;margin-top: 10px;border-radius: 5px;">提交</button>
+            <button class="layui-btn layui-btn-primary cancel"
+                style="width: 30%;margin-left: 15px;margin-top: 10px;border-radius: 5px;" type="button">取消</button>
+        </form>
+    </div>
+
+    <div id="sort">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">推荐值：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="sort" placeholder="请输入新的推荐值" value="0" class="layui-input resort">
+                    <label style="margin-top: 15px;">推荐值越大显示越靠前</label>
+                    <input type="text" name="id" value="0" style="display: none;" class="sortid">
+                </div>
+            </div>
+            <button class="layui-btn" lay-submit lay-filter="formsort"
+                style="width: 30%;margin-left: 90px;margin-top: 10px;border-radius: 5px;">提交</button>
+            <button class="layui-btn layui-btn-primary cancel"
+                style="width: 30%;margin-left: 15px;margin-top: 10px;border-radius: 5px;" type="button">取消</button>
+        </form>
+    </div>
+
+    <div id="warp">
+        <div class="layui-side layui-bg-black">
+            <div title="菜单缩放" class="kit-side-fold" style="text-align: center;"><i class="fa fa-navicon fa-lg"
+                    aria-hidden="true"></i></div>
+            <ul class="layui-nav layui-nav-tree layui-bg-cyan layui-inline" lay-filter="">
+                <li class="layui-nav-item"><a href="Home.html"><i class="fa fa-home"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>首页</span></a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-folder"></i>&nbsp;&nbsp;<span>新闻管理</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="NewsManager.html"><i class="fa fa-file"></i>&nbsp;&nbsp;<span>新闻管理</span></a></dd>
+                        <dd><a href="NewArticles.html"><i class="fa fa-plus-square-o"
+                                    aria-hidden="true"></i>&nbsp;&nbsp;<span>新建新闻</span></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="CategoryManager.html"><i
+                            class="fa fa-server"></i>&nbsp;&nbsp;<span>分类管理</span></a></li>
+                <li class="layui-nav-item"><a href="OperateLog.html"><i class="fa fa-pencil-square"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>操作日志</span></a></li>
+                <li class="layui-nav-item"><a href="../home/Home.html"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>退出后台</span></a></li>
+            </ul>
+        </div>
+        <header id="header" class="layui-row">
+            <div class="layui-col-md10">
+                <span class="title">新闻管理后台</span>
+            </div>
+            <div class="user layui-col-md2">
+                <img src="../images/u163.png" width="60px" height="60px" style="border-radius: 30px;">
+                <span
+                    style="font-size: 18px;font-weight: bold;position: relative;left: 4%;bottom: 5%;">百师通教育&nbsp;&nbsp;<i
+                        class="fa fa-caret-down fa-lg"></i></span>
+                <span style="position:relative;top: 14%;right: 38%;" class="nickname">李晓阳</span>
+            </div>
+        </header>
+        <div id="content">
+            <div class="header">
+                <span style="font-size: 24px;font-weight: bold;margin-left: 30px;">分类管理</span>
+                <select class="category1"></select>
+                <select class="category2"></select>
+                <button type="button" class="add">添加</button>
+                <button type="button" class="edit">编辑</button>
+                <button type="button" class="remove">删除</button>
+                <button type="button" class="recommend">推荐</button>
+                <input type="text" class="keyword" placeholder="请输入标题关键字" name="title"><i class="fa fa-search"
+                    aria-hidden="true" id="search"></i>
+            </div>
+            <div class="info">
+                <table id="table" lay-filter="table"></table>
+                <table id="wheretb" lay-filter="wheretb"></table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        Storage.prototype.getExpire = key => {
+            let val = localStorage.getItem(key);
+            if (!val) {
+                return val;
+            }
+            val = JSON.parse(val);
+            //判断时间是否超出设定时间
+            if (Date.now() - val.time > val.expire) {
+                localStorage.clear();
+                return null;
+            }
+            return val.data;
+        }
+
+        //JavaScript代码区域
+        layui.use(['element', 'jquery', 'laypage', 'layer', 'table', 'form'], function () {
+            var element = layui.element
+                , laypage = layui.laypage
+                , layer = layui.layer
+                , table = layui.table
+                , form = layui.form
+                , $ = layui.jquery;
+
+            var isShow = true;  //定义一个标志位
+            $('.kit-side-fold').click(function () {
+                //选择出所有的span，并判断是不是hidden
+                $('.layui-nav-item span').each(function () {
+                    if ($(this).is(':hidden')) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+                //判断isshow的状态
+                if (isShow) {
+                    $('.layui-side.layui-bg-black').width(60); //设置宽度
+                    $('.kit-side-fold i').css('margin-right', '5%');  //修改图标的位置
+                    //将footer和body的宽度修改
+                    $('.layui-body').css('left', 60 + 'px');
+                    $('.layui-footer').css('left', 60 + 'px');
+                    //将二级导航栏隐藏
+                    $('dd span').each(function () {
+                        $(this).hide();
+                    });
+                    //修改标志位
+                    isShow = false;
+                } else {
+                    $('.layui-side.layui-bg-black').width(200);
+                    $('.kit-side-fold i').css('margin-right', '10%');
+                    $('.layui-body').css('left', 200 + 'px');
+                    $('.layui-footer').css('left', 200 + 'px');
+                    $('dd span').each(function () {
+                        $(this).show();
+                    });
+                    isShow = true;
+                }
+            });
+
+            //页面加载时所需函数
+            $(function () {
+                //验证用户三天内是否登录过
+                if (localStorage.hasOwnProperty('name')) {
+                    console.log(localStorage.getExpire("name"));
+                    $('.nickname').html(localStorage.getExpire("name"));
+                }
+                //一级分类
+                categorylist(0);
+                tb();
+                form.render('select');
+            });
+
+            //二级分类
+            $('.category1').change(function () {
+                var id = $('.category1 option:selected').val();
+                $('.category2').empty();
+                categorylist(id);
+            })
+
+            //搜索
+            $('#search').click(function () {
+                $('.layui-table-view').css("display", "none");
+                wheretb();
+            });
+
+            //点击取消按钮关闭窗口
+            $('.cancel').click(function () {
+                layer.closeAll();
+            });
+
+            //打开添加窗口
+            $(".add").click(function () {
+                layer.open({
+                    type: 1,
+                    title: ['添加分类', 'font-size:18px;'],
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['360px', '255px'],
+                    offset: '190px',
+                    content: $('#add')
+                });
+            });
+
+            //打开编辑窗口
+            $(".edit").click(function () {
+                if ($('.category2 option:selected').val() != 0 && $('.category2 option:selected').val() != undefined) {
+                    var id = $('.category2 option:selected').val();
+                    var name = $('.category2 option:selected').text();
+                    $('.ename').val(name);
+                    $('.categoryid').val(id);
+                } else {
+                    var id = $('.category1 option:selected').val();
+                    var name = $('.category1 option:selected').text();
+                    $('.ename').val(name);
+                    $('.categoryid').val(id);
+                }
+                Recordtb();
+                layer.open({
+                    type: 1,
+                    title: ['编辑分类', 'font-size:18px;'],
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['650px', '450px'],
+                    offset: '190px',
+                    content: $('#edit')
+                });
+            });
+
+            //打开推荐窗口
+            $(".recommend").click(function () {
+                if ($('.category2 option:selected').val() != 0 && $('.category2 option:selected').val() != undefined) {
+                    $('.resort').val($('.category2 option:selected').attr('data-sort'));
+                    console.log($('.category2 option:selected').val());
+                    $('.sortid').val($('.category2 option:selected').val());
+                } else {
+                    $('.resort').val($('.category1 option:selected').attr('data-sort'));
+                    console.log($('.category1 option:selected').val());
+                    $('.sortid').val($('.category1 option:selected').val());
+                }
+                layer.open({
+                    type: 1,
+                    title: ['推荐', 'font-size:18px;'],
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['450px', '225px'],
+                    offset: '190px',
+                    content: $('#sort')
+                });
+            });
+
+            //添加分类
+            form.on('submit(formsort)', function (info) {
+                $.ajax({
+                    url: localStorage.getItem('url') + '/NewsCategory/RecommendSort',
+                    headers: { 'Authorization': localStorage.getExpire('token') },
+                    data: JSON.stringify(info.field),
+                    type: 'POST',
+                    contentType: 'application/json; charset=UTF-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        if (data.status) {
+                            layer.msg(data.message, { icon: 1, time: 1200 }, function () {
+                                layer.closeAll();
+                            });
+                        } else {
+                            layer.msg(data.message, { icon: 2 });
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e.status);
+                        console.log(e.message);
+                    }
+                });
+                return false;
+            });
+
+            //添加分类
+            form.on('submit(formadd)', function (info) {
+                $.ajax({
+                    url: localStorage.getItem('url') + '/NewsCategory/AddNewsCategory',
+                    headers: { 'Authorization': localStorage.getExpire('token') },
+                    data: JSON.stringify(info.field),
+                    type: 'POST',
+                    contentType: 'application/json; charset=UTF-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        if (data.status) {
+                            layer.msg(data.message, { icon: 1, time: 1200 }, function () {
+                                layer.closeAll();
+                            });
+                        } else {
+                            layer.msg(data.message, { icon: 2 });
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e.status);
+                        console.log(e.message);
+                    }
+                });
+                return false;
+            });
+
+            //编辑分类
+            form.on('submit(formedit)', function (info) {
+                $.ajax({
+                    url: localStorage.getItem('url') + '/NewsCategory/UpdateNewsCategory',
+                    headers: { 'Authorization': localStorage.getExpire('token') },
+                    data: JSON.stringify(info.field),
+                    type: 'POST',
+                    contentType: 'application/json; charset=UTF-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        if (data.status) {
+                            layer.msg(data.message, { icon: 1, time: 1200 }, function () {
+                                layer.closeAll();
+                            });
+                        } else {
+                            layer.msg(data.message, { icon: 2 });
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e.status);
+                        console.log(e.message);
+                    }
+                });
+                return false;
+            });
+
+            //删除分类
+            $('.remove').click(function () {
+                if ($('.category2 option:selected').val() != 0 && $('.category2 option:selected').val() != undefined) {
+                    var id = $('.category2 option:selected').val();
+                } else {
+                    var id = $('.category1 option:selected').val();
+                }
+
+                layer.confirm('确定删除该分类吗？', {
+                    btn: ['删除', '取消'] //按钮
+                }, function () {
+                    console.log(id);
+                    $.ajax({
+                        url: localStorage.getItem('url') + '/NewsCategory/DeleteNewsCategory',
+                        headers: { 'Authorization': localStorage.getExpire('token') },
+                        data: JSON.stringify({ "id": id }),
+                        contentType: 'application/json; charset=UTF-8',
+                        type: 'POST',
+                        success: function (data) {
+                            console.log(data);
+                            if (data.status) {
+                                layer.msg(data.message, { icon: 1, time: 1200 }, function () {
+                                    layer.closeAll();
+                                });
+                            } else {
+                                layer.msg(data.message, { icon: 2, time: 1300 });
+                            }
+                        },
+                        error: function (e) {
+                            console.log(e.status);
+                            console.log(e.message);
+                        }
+                    });
+                }, function () {
+                    layer.closeAll();
+                });
+            });
+
+            //自定义验证规则
+            form.verify({
+                name: [
+                    /^[\u4E00-\u9FA5]{2,4}$/
+                    , '分类名称格式不正确，只能为中文且长度为2-4位'
+                ]
+            });
+
+            //分类列表数据
+            function categorylist(id) {
+                $.ajax({
+                    url: localStorage.getItem('url') + '/NewsCategory/SelectCategoryList',
+                    headers: { 'Authorization': localStorage.getExpire('token') },
+                    data: { "id": id },
+                    dataType: 'json',
+                    async: false,
+                    method: 'get',
+                    success: function (res) {
+                        if (res.status) {
+                            console.log(res);
+                            var content = "";
+                            for (const key in res.data) {
+                                content += '<option value="' + res.data[key].id + '" data-parentId="' + res.data[key].parentId + '" data-sort="' + res.data[key].sort + '">' + res.data[key].name + '</option>';
+                            }
+                            if (res.data[0].parentId == 0) {
+                                $('.category1').append(content);
+                                $('.parent').append(content);
+                            } else {
+                                $('.category2').append(content);
+                            }
+
+                        }
+                    }
+                });
+            }
+
+            //渲染数据表格-不带条件
+            function tb() {
+                table.render({
+                    elem: '#table'
+                    , url: localStorage.getItem('url') + '/NewsCategory/SelectCategoryAll'
+                    , page: {
+                        layout: ['limit', 'count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
+                        , limit: 20
+                        , limits: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+                        , first: '首页'
+                        , last: '尾页'
+                        , groups: 1
+                    }
+                    , request: {
+                        pageName: 'pageIndex' //页码的参数名称
+                        , limitName: 'pageSize' //页总数
+                    }
+                    , headers: { 'Authorization': localStorage.getExpire('token') }
+                    , parseData: function (res) { //res 即为原始返回的数据
+                        console.log(res)
+                        return {
+                            "code": 0, //解析接口状态
+                            "msg": res.message, //解析提示文本
+                            "count": res.data[0].count, //解析数据长度
+                            "data": res.data //解析数据列表
+                        };
+                    }
+                    , cols: [[
+                        { field: 'id', width: 103, title: '序号', sort: true, align: 'center' }
+                        , { field: 'name', width: 300, title: '名称', align: 'center' }
+                        , { field: 'parentId', width: 210, title: '分类类别', align: 'center', templet: function (d) { if (d.parentId == 0) { return '一级分类' } else { return '二级分类' } } }
+                        , { field: 'sort', title: '推荐值', width: 210, sort: true, align: 'center' }
+                        , { field: 'operateTime', width: 210, title: '最新编辑时间', sort: true, align: 'center' }
+                        , { field: 'nickname', width: 210, title: '编辑人', align: 'center' }
+                    ]]
+                    , done: function (res, curr, count) {
+                        //如果是异步请求数据方式，res即为你接口返回的信息。
+                        //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                        console.log(res);
+                        //得到当前页码
+                        console.log(curr);
+                    }
+                });
+            }
+
+            //渲染数据表格-带条件
+            function wheretb() {
+                table.render({
+                    elem: '#wheretb'
+                    , url: localStorage.getItem('url') + '/NewsCategory/SelectCategoryAll'
+                    , page: {
+                        layout: ['limit', 'count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
+                        , limit: 10
+                        , limits: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+                        , first: '首页'
+                        , last: '尾页'
+                        , groups: 1
+                    }
+                    , where: { name: $('.keyword').val() }
+                    , request: {
+                        pageName: 'pageIndex' //页码的参数名称
+                        , limitName: 'pageSize' //页总数
+                    }
+                    , headers: { 'Authorization': localStorage.getExpire('token') }
+                    , parseData: function (res) { //res 即为原始返回的数据
+                        console.log(res)
+                        return {
+                            "code": 0, //解析接口状态
+                            "msg": res.message, //解析提示文本
+                            "count": res.data[0].count, //解析数据长度
+                            "data": res.data //解析数据列表
+                        };
+                    }
+                    , cols: [[
+                        { field: 'id', width: 103, title: '序号', sort: true, align: 'center' }
+                        , { field: 'name', width: 300, title: '名称', align: 'center' }
+                        , { field: 'parentId', width: 210, title: '分类类别', align: 'center', templet: function (d) { if (d.parentId == 0) { return '一级分类' } else { return '二级分类' } } }
+                        , { field: 'sort', title: '推荐值', width: 210, sort: true, align: 'center' }
+                        , { field: 'operateTime', width: 210, title: '最新编辑时间', sort: true, align: 'center' }
+                        , { field: 'nickname', width: 210, title: '编辑人', align: 'center' }
+                    ]]
+                    , done: function (res, curr, count) {
+                        //如果是异步请求数据方式，res即为你接口返回的信息。
+                        //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                        console.log(res);
+                        //得到当前页码
+                        console.log(curr);
+                    }
+                });
+            }
+
+            //渲染数据表格-分类编辑记录
+            function Recordtb() {
+                table.render({
+                    elem: '#editRecord'
+                    , url: localStorage.getItem('url') + '/OpeaateLog/CategoryEditRecord'
+                    , page: {
+                        layout: ['count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
+                        , limit: 3
+                        , first: '首页'
+                        , last: '尾页'
+                        , groups: 1
+                    }
+                    , request: {
+                        pageName: 'pageIndex' //页码的参数名称
+                        , limitName: 'pageSize' //页总数
+                    }
+                    , headers: { 'Authorization': localStorage.getExpire('token') }
+                    , parseData: function (res) { //res 即为原始返回的数据
+                        console.log(res)
+                        return {
+                            "code": 0, //解析接口状态
+                            "msg": res.message, //解析提示文本
+                            "count": res.data[0].count, //解析数据长度
+                            "data": res.data //解析数据列表
+                        };
+                    }
+                    , cols: [[
+                        { field: 'id', width: 90, title: '序号', sort: true, align: 'center' }
+                        , { field: 'nickname', width: 100, title: '编辑人', align: 'center' }
+                        , { field: 'operateTime', width: 140, title: '最新编辑时间', sort: true, align: 'center' }
+                        , { field: 'action', title: '修改内容', width: 130, align: 'center' }
+                    ]]
+                    , done: function (res, curr, count) {
+                        //如果是异步请求数据方式，res即为你接口返回的信息。
+                        //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                        console.log(res);
+                        //得到当前页码
+                        console.log(curr);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

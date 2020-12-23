@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../components/layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
+    <script src="../../components/layuiadmin/layui/layui.js"></script>
+    <title>新闻管理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #warp {
+            width: 1750px;
+            height: 1800px;
+            background-color: rgb(248, 248, 248);
+        }
+
+        .layui-nav * {
+            font-size: 15px;
+        }
+
+        #header {
+            margin-left: 200px;
+            width: 1550px;
+            height: 120px;
+            line-height: 120px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+
+        #header .title {
+            margin-left: 30px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #header .user {
+            height: 120px;
+            text-align: center;
+        }
+
+        #details {
+            width: 1350px;
+            margin-top: 30px;
+            margin-left: 290px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+
+        .layui-tab-content {
+            width: 98%;
+            margin-left: 10px;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        .layui-tab {
+            width: 97%;
+            margin: 0 auto;
+        }
+
+        .layui-tab .layui-tab-title {
+            height: 55px;
+            width: 97%;
+            margin-top: 40px;
+            padding-left: 35px;
+            border-bottom: 2px solid rgb(240, 240, 240);
+        }
+
+        .layui-tab-title #headline {
+            font-size: 14px;
+            width: 220px;
+            height: 33px;
+            line-height: 33px;
+            padding-left: 5px;
+            border-radius: 5px;
+            border-color: rgb(36, 149, 219);
+        }
+
+        .layui-tab-title li:nth-of-type(4) {
+            margin: 0;
+            margin-left: 30%;
+        }
+
+        .layui-tab-title li:nth-of-type(5) {
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .layui-tab-title li:nth-of-type(6) {
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .layui-tab-title li:nth-of-type(7) {
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .search {
+            width: 90px;
+            height: 37px;
+            line-height: 30px;
+            background-color: rgb(43, 164, 240);
+            color: white;
+            border: none;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .refresh {
+            width: 90px;
+            height: 37px;
+            line-height: 30px;
+            background-color: rgb(23, 204, 62);
+            color: white;
+            border: none;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .add {
+            width: 130px;
+            height: 37px;
+            line-height: 30px;
+            background-color: rgb(43, 164, 240);
+            color: white;
+            border: none;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .layui-tab-item .layui-row:hover {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .thead {
+            width: 100%;
+            height: 45px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            background-color: rgb(238, 238, 238);
+            border: 1px solid rgb(228, 228, 228);
+        }
+
+        .thead div {
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .tbdoy {
+            width: 100%;
+            height: 120px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            background-color: white;
+            margin-top: 10px;
+        }
+
+        .tbdoy:hover {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .tbdoy div {
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .md4 {
+            letter-spacing: 0;
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            /*要显示的行数*/
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="warp">
+        <div class="layui-side layui-bg-black">
+            <div title="菜单缩放" class="kit-side-fold" style="text-align: center;"><i class="fa fa-navicon fa-lg"
+                    aria-hidden="true"></i></div>
+            <ul class="layui-nav layui-nav-tree layui-bg-cyan layui-inline" lay-filter="">
+                <li class="layui-nav-item"><a href="Home.html"><i class="fa fa-home"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>首页</span></a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-folder"></i>&nbsp;&nbsp;<span>新闻管理</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="NewsManager.html"><i class="fa fa-file"></i>&nbsp;&nbsp;<span>新闻管理</span></a></dd>
+                        <dd><a href="NewArticles.html"><i class="fa fa-plus-square-o"
+                                    aria-hidden="true"></i>&nbsp;&nbsp;<span>新建新闻</span></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="CategoryManager.html"><i
+                            class="fa fa-server"></i>&nbsp;&nbsp;<span>分类管理</span></a></li>
+                <li class="layui-nav-item"><a href="OperateLog.html"><i class="fa fa-pencil-square"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>操作日志</span></a></li>
+            </ul>
+        </div>
+        <header id="header" class="layui-row">
+            <div class="layui-col-md10">
+                <span class="title">新闻管理后台</span>
+            </div>
+            <div class="user layui-col-md2">
+                <img src="../images/u163.png" width="60px" height="60px" style="border-radius: 30px;">
+                <span
+                    style="font-size: 18px;font-weight: bold;position: relative;left: 4%;bottom: 5%;">百师通教育&nbsp;&nbsp;<i
+                        class="fa fa-caret-down fa-lg"></i></span>
+                <span style="position:relative;top: 14%;right: 38%;" class="nickname">李晓阳</span>
+            </div>
+        </header>
+        <div id="details">
+            <div class="layui-tab layui-tab-brief" lay-filter="options">
+                <span style="margin-left: 10px; font-size: 18px;position: relative;top: 30px;">图文素材</span>
+                <ul class="layui-tab-title">
+                    <li data-status="9">所有状态</li>
+                    <li data-status="1">已发布</li>
+                    <li class="layui-this" data-status="4">草稿</li>
+                    <li><input type="text" name="headline" id="headline" placeholder="搜索文章标题"></li>
+                    <li><button class="search"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;搜索</button>
+                    </li>
+                    <li><button class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;&nbsp;刷新</button>
+                    </li>
+                    <li><button class="add"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;新建素材</button></li>
+                </ul>
+                <div class="layui-tab-content" style="border: 1px solid rgb(228, 228, 228);">
+                    <div class="thead">
+                        <div class="md1" style="width: 70px;">序号</div>
+                        <div class="md4" style="width: 500px;">文章首图</div>
+                        <div class="md1" style="width: 100px;">文章状态</div>
+                        <div class="md2" style="width: 200px;">编辑时间</div>
+                        <div class="md2" style="width: 200px;">发布时间</div>
+                        <div class="md2" style="width: 200px;">操作</div>
+                    </div>
+                    <div class="layui-tab-item layui-show">
+                        <div class="tbdoy">
+                            <div class="md1" style="width: 70px;">1</div>
+                            <div class="md14" style="width: 140px;"><img src="../images/u163.png" alt="封图" width="120px"
+                                    height="90px"></div>
+                            <div class="md4"
+                                style="width: 370px;line-height: 30px;text-align: left;padding-top: 30px;height: 90px;">
+                                花了上万元后，我来告诉你什么才是最值得下载的APP</div>
+                            <div class="md1" style="width: 100px;">草稿</div>
+                            <div class="md2" style="width: 200px;">2020-12-08 11:53:01.093</div>
+                            <div class="md2" style="width: 200px;">2020年12月9日15:06:49</div>
+                            <div class="md2" style="width: 200px;font-size: 26px;">
+                                <a href="#" style="padding-left: 20px;"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="#" style="padding-left: 20px;"><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i></a>
+                                <a href="#" style="padding-left: 20px;"><i class="fa fa-trash-o"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item">
+                    </div>
+                    <div class="layui-tab-item">
+                    </div>
+                </div>
+                <div id="page" style="width: 70%;margin-top: 20px;padding-bottom: 20px;"></div>
+            </div>
+        </div>
+
+        <script>
+            Storage.prototype.getExpire = key => {
+                let val = localStorage.getItem(key);
+                if (!val) {
+                    return val;
+                }
+                val = JSON.parse(val);
+                //判断时间是否超出设定时间
+                if (Date.now() - val.time > val.expire) {
+                    localStorage.clear();
+                    return null;
+                }
+                return val.data;
+            }
+
+            //JavaScript代码区域
+            layui.use(['element', 'jquery', 'laypage', 'layer'], function () {
+                var element = layui.element
+                    , laypage = layui.laypage
+                    , layer = layui.layer
+                    , $ = layui.jquery;
+
+                var isShow = true;  //定义一个标志位
+                $('.kit-side-fold').click(function () {
+                    //选择出所有的span，并判断是不是hidden
+                    $('.layui-nav-item span').each(function () {
+                        if ($(this).is(':hidden')) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                    //判断isshow的状态
+                    if (isShow) {
+                        $('.layui-side.layui-bg-black').width(60); //设置宽度
+                        $('.kit-side-fold i').css('margin-right', '5%');  //修改图标的位置
+                        //将footer和body的宽度修改
+                        $('.layui-body').css('left', 60 + 'px');
+                        $('.layui-footer').css('left', 60 + 'px');
+                        //将二级导航栏隐藏
+                        $('dd span').each(function () {
+                            $(this).hide();
+                        });
+                        //修改标志位
+                        isShow = false;
+                    } else {
+                        $('.layui-side.layui-bg-black').width(200);
+                        $('.kit-side-fold i').css('margin-right', '10%');
+                        $('.layui-body').css('left', 200 + 'px');
+                        $('.layui-footer').css('left', 200 + 'px');
+                        $('dd span').each(function () {
+                            $(this).show();
+                        });
+                        isShow = true;
+                    }
+                });
+
+                var paegSum = 0;
+                var status = 4;
+
+                //监听选项卡切换
+                element.on('tab(options)', function (data) {
+                    status = $(this).attr('data-status');
+                    if (status == 9 || status == 1 || status == 4) {
+                        SelectNewsManager(status, 1);
+                        $('#page').empty();
+                        flushPgae(paegSum);
+                    }
+                });
+
+                //搜索
+                $('.search').click(function () {
+                    var tl = $('#headline').val();
+                    SelectNewsManagerTitle(tl, 1);
+                    $('#page').empty();
+                    flushPgae(paegSum);
+                });
+
+                //刷新
+                $('.refresh').click(function () {
+                    window.location.reload();
+                });
+
+                //新建素材
+                $('.add').click(function () {
+                    window.location.href = 'NewArticles.html';
+                });
+
+                //页面加载时所需函数
+                $(function () {
+                    //验证用户三天内是否登录过
+                    if (localStorage.hasOwnProperty('name')) {
+                        $('.nickname').html(localStorage.getExpire("name"));
+                    }
+                    SelectNewsManager(4, 1);
+                    $('#page').empty();
+                    flushPgae(paegSum);
+                });
+
+                //新闻管理界面数据查询
+                function SelectNewsManager(status, pageIndex) {
+                    console.log(status, pageIndex);
+                    $.ajax({
+                        url: localStorage.getItem('url') + '/NewsManager/SelectNewsManager',
+                        headers: { 'Authorization': localStorage.getExpire('token') },
+                        data: { "status": status, "pageIndex": pageIndex },
+                        dataType: 'json',
+                        method: 'get',
+                        async: false,
+                        success: function (res) {
+                            console.log(res);
+                            var content = "";
+                            if (res.status) {
+                                for (const key in res.data) {
+                                    if (res.data[key].status == 1) {
+                                        var release = res.data[key].operateTime;
+                                        var state = '已发布';
+                                        var dis = 'pointer-events:none';
+                                        var cless = 'style="color:lightgray;"';
+                                    } else {
+                                        var release = "————";
+                                        var state = '草稿';
+                                        var dis = '';
+                                        var cless = '';
+                                    }
+                                    content += '<div class="tbdoy"><div class="md1" style="width: 70px;">' + res.data[key].id + '</div><div class="md14" style="width: 140px;"><img src="' + res.data[key].cover + '" alt="封图" width="120px" height="90px"></div><div class="md4"style="width: 355px;line-height: 30px;text-align: left;padding-top: 30px;height: 90px;">' + res.data[key].title + '</div><div class="md1" style="width: 115px;">' + state + '</div><div class="md2" style="width: 200px;">' + res.data[key].operateTime + '</div><div class="md2" style="width: 200px;">' + release + '</div><div class="md2" style="width: 200px;font-size: 26px;"><a href="#" style="padding-left: 20px;' + dis + '"><i class="fa fa-eye" aria-hidden="true" ' + cless + '></i></a><a href="NewsModify.html?id=' + res.data[key].id + '" style="padding-left: 20px;' + dis + '"><i class="fa fa-pencil-square-o" aria-hidden="true"' + cless + '></i></a><a href="Javascripts:void(0);" style="padding-left: 20px;"><i class="fa fa-trash-o remove" aria-hidden="true" data-newsId="' + res.data[key].id + '"></i></a></div></div>'
+                                }
+                                $('.layui-show').empty();
+                                $('.layui-show').html(content);
+                                paegSum = res.data[0].count;
+                            } else {
+                                layer.msg(res.message, { icon: 2, time: 1200, offset: "240px" });
+                            }
+                            return paegSum;
+                        }
+                    });
+                }
+
+                //新闻管理界面标题模糊查询
+                function SelectNewsManagerTitle(title, pageIndex) {
+                    $.ajax({
+                        url: localStorage.getItem('url') + '/NewsManager/SelectNewsManagerTitle',
+                        headers: { 'Authorization': localStorage.getExpire('token') },
+                        data: { "title": title, "pageIndex": pageIndex },
+                        dataType: 'json',
+                        method: 'get',
+                        async: false,
+                        success: function (res) {
+                            var content = "";
+                            if (res.status) {
+                                for (const key in res.data) {
+                                    if (res.data[key].status == 1) {
+                                        var release = res.data[key].operateTime;
+                                        var state = '已发布';
+                                        var dis = 'pointer-events:none';
+                                        var cless = 'style="color:lightgray;"';
+                                    } else {
+                                        var release = "————";
+                                        var state = '草稿';
+                                        var dis = '';
+                                        var cless = '';
+                                    }
+                                    content += '<div class="tbdoy"><div class="md1" style="width: 70px;">' + res.data[key].id + '</div><div class="md14" style="width: 140px;"><img src="' + res.data[key].cover + '" alt="封图" width="120px" height="90px"></div><div class="md4"style="width: 355px;line-height: 30px;text-align: left;padding-top: 30px;height: 90px;">' + res.data[key].title + '</div><div class="md1" style="width: 115px;">' + state + '</div><div class="md2" style="width: 200px;">' + res.data[key].operateTime + '</div><div class="md2" style="width: 200px;">' + release + '</div><div class="md2" style="width: 200px;font-size: 26px;"><a href="#" style="padding-left: 20px;' + dis + '"><i class="fa fa-eye" aria-hidden="true" ' + cless + '></i></a><a href="NewsModify.html?id=' + res.data[key].id + '" style="padding-left: 20px;' + dis + '"><i class="fa fa-pencil-square-o" aria-hidden="true" ' + cless + '></i></a><a href="javascript:;" style="padding-left: 20px;"><i class="fa fa-trash-o remove" aria-hidden="true" data-newsId="' + res.data[key].id + '"></i></a></div></div>'
+                                }
+                                paegSum = res.data[0].count;
+                                $('.layui-show').empty();
+                                $('.layui-show').html(content);
+                            } else {
+                                layer.msg(res.message, { icon: 2, time: 1200, offset: "240px" });
+                            }
+                            return paegSum;
+                        }
+                    });
+                }
+
+                //删除新闻
+                $(document).on("click",".remove",function () {
+                    //获取要删除的新闻ID
+                    var id = $(this).attr('data-newsId');
+                    //获取要删除的新闻内容
+                    var parent = $(this).parent().parent().parent();
+                    console.log(id,parent);
+                    layer.confirm('确定删除该新闻吗？', {
+                        btn: ['删除', '取消'], icon: 3, title: '删除', offset: '270px'
+                    }, function () {
+                        $.ajax({
+                            url: localStorage.getItem('url') + '/NewsManager/NewsDetailState',
+                            headers: { 'Authorization': localStorage.getExpire('token') },
+                            data: JSON.stringify({ "id": id, "status": 0 }),
+                            contentType: 'application/json; charset=UTF-8',
+                            type: 'POST',
+                            success: function (data) {
+                                console.log(data);
+                                if (data.status) {
+                                    layer.msg('删除新闻成功！', { icon: 1, time: 1200 }, function () {
+                                        //关闭窗口
+                                        layer.closeAll();
+                                        //删除对应节点
+                                        parent.remove();
+                                    });
+                                } else {
+                                    layer.msg('删除新闻失败。', { icon: 2, time: 1300 });
+                                }
+                            },
+                            error: function (e) {
+                                console.log(e.status);
+                                console.log(e.message);
+                            }
+                        });
+                    }, function () {
+                        layer.closeAll();
+                    });
+                });
+
+                //将分页封装成方法调用
+                function flushPgae(nums) {
+                    laypage.render({
+                        elem: 'page'
+                        , theme: '#1E9FFF'
+                        , count: nums
+                        , limit: 10
+                        , first: '首页'
+                        , last: '尾页'
+                        , jump: function (obj, first) {
+                            if (!first) {
+                                SelectNewsManager(status, obj.curr);
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+D:\bst-test\practice-proj\Practice.IRepositories\bin\Release\netstandard2.0\Practice.IRepositories.deps.json
+D:\bst-test\practice-proj\Practice.IRepositories\bin\Release\netstandard2.0\Practice.IRepositories.dll
+D:\bst-test\practice-proj\Practice.IRepositories\bin\Release\netstandard2.0\Practice.IRepositories.pdb
+D:\bst-test\practice-proj\Practice.IRepositories\obj\Release\netstandard2.0\Practice.IRepositories.csprojAssemblyReference.cache
+D:\bst-test\practice-proj\Practice.IRepositories\obj\Release\netstandard2.0\Practice.IRepositories.AssemblyInfoInputs.cache
+D:\bst-test\practice-proj\Practice.IRepositories\obj\Release\netstandard2.0\Practice.IRepositories.AssemblyInfo.cs
+D:\bst-test\practice-proj\Practice.IRepositories\obj\Release\netstandard2.0\Practice.IRepositories.csproj.CoreCompileInputs.cache
+D:\bst-test\practice-proj\Practice.IRepositories\obj\Release\netstandard2.0\Practice.IRepositories.dll
+D:\bst-test\practice-proj\Practice.IRepositories\obj\Release\netstandard2.0\Practice.IRepositories.pdb

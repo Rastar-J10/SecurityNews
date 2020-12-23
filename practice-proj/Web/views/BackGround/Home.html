@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../components/layui-v2.5.7/layui/css/layui.css">
+    <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
+    <script src="../../components/layui-v2.5.7/layui/layui.js"></script>
+    <title>新闻管理后台首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #warp {
+            width: 1750px;
+            background-color: rgb(248, 248, 248);
+        }
+
+        .layui-nav * {
+            font-size: 15px;
+        }
+
+        #header {
+            margin-left: 200px;
+            width: 1550px;
+            height: 120px;
+            line-height: 120px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+
+        #header .title {
+            margin-left: 30px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #header .user {
+            height: 120px;
+            text-align: center;
+        }
+
+        #overall {
+            width: 1350px;
+            height: 170px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+            margin-left: 290px;
+            margin-top: 30px;
+        }
+
+        #overall .title {
+            height: 60px;
+            line-height: 60px;
+            width: 100%;
+            padding-left: 60px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #overall .overall-box {
+            width: 100%;
+            height: 110px;
+        }
+
+        .overall-box .item {
+            text-align: center;
+            height: 100%;
+        }
+
+        .overall-box .item span:nth-of-type(1) {
+            color: gray;
+        }
+
+        .overall-box .item span:nth-of-type(2) {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 27px;
+            font-weight: bolder;
+            position: relative;
+            top: 15px;
+        }
+
+        #details {
+            width: 1350px;
+            margin-top: 30px;
+            margin-left: 290px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 2px rgb(179, 179, 179);
+        }
+
+        #details .header {
+            width: 96%;
+            height: 100px;
+            line-height: 100px;
+            margin: 0 auto;
+            border-bottom: 1px solid lightgray;
+        }
+
+        #details .header span {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        #details .header a {
+            text-align: center;
+            display: inline-block;
+            width: 90px;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 8px;
+            font-weight: bolder;
+            background-color: rgb(36, 149, 219);
+            color: white;
+            margin-left: 84%;
+        }
+
+        .layui-tab-content {
+            margin-left: 10px;
+            padding: 0;
+        }
+
+        .layui-tab {
+            width: 96%;
+            margin: 0 auto;
+        }
+
+        .layui-tab .layui-tab-title {
+            margin-top: 10px;
+            margin-left: 35px;
+        }
+
+        .layui-tab-item .layui-row {
+            width: 100%;
+            height: 110px;
+            margin-top: 25px;
+        }
+
+        .layui-tab-item .layui-row:hover {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .state {
+            width: 160px;
+            height: 110px;
+            line-height: 70px;
+            color: gray;
+        }
+
+        .state i {
+            font-size: 28px;
+            position: relative;
+            top: 5%;
+            left: 35%;
+        }
+
+        .state span {
+            font-size: 16px;
+            position: relative;
+            top: 35%;
+            left: 14%;
+        }
+
+        .layui-col-md8 {
+            height: 110px;
+        }
+
+        .layui-col-md8 .news-title {
+            margin-top: 10px;
+            font-size: 16px;
+            letter-spacing: 0;
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            /*要显示的行数*/
+            -webkit-box-orient: vertical;
+        }
+
+        .layui-col-md8 .readNum,
+        .commentNum {
+            position: relative;
+            color: gray;
+            font-size: 15px;
+        }
+
+        .layui-col-md8 .commentNum {
+            left: 25px;
+        }
+
+        #hid {
+            display: none;
+        }
+
+        .layui-table-cell {
+            height: 80px !important;
+            font-size: 15px;
+            color: rgb(36, 34, 34);
+            line-height: 80px;
+        }
+
+        .layui-table-header .layui-table-cell{
+            height: 50px !important;
+            font-size: 15px;
+            color: rgb(36, 34, 34);
+            line-height: 50px;
+            font-size: 15px;
+            color: rgb(36, 34, 34);
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hid">
+        <table id="table" lay-filter="table"></table>
+    </div>
+
+    <div id="warp">
+        <div class="layui-side layui-bg-black">
+            <div title="菜单缩放" class="kit-side-fold" style="text-align: center;"><i class="fa fa-navicon fa-lg"
+                    aria-hidden="true"></i></div>
+            <ul class="layui-nav layui-nav-tree layui-bg-cyan layui-inline" lay-filter="">
+                <li class="layui-nav-item"><a href="Home.html"><i class="fa fa-home"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>首页</span></a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-folder"></i>&nbsp;&nbsp;<span>新闻管理</span></a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="NewsManager.html"><i class="fa fa-file"></i>&nbsp;&nbsp;<span>新闻管理</span></a></dd>
+                        <dd><a href="NewArticles.html"><i class="fa fa-plus-square-o"
+                                    aria-hidden="true"></i>&nbsp;&nbsp;<span>新建新闻</span></a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="CategoryManager.html"><i
+                            class="fa fa-server"></i>&nbsp;&nbsp;<span>分类管理</span></a></li>
+                <li class="layui-nav-item"><a href="OperateLog.html"><i class="fa fa-pencil-square"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>操作日志</span></a></li>
+                <li class="layui-nav-item"><a href="../home/Home.html"><i class="fa fa-sign-out"
+                            aria-hidden="true"></i>&nbsp;&nbsp;<span>退出后台</span></a></li>
+            </ul>
+        </div>
+        <header id="header" class="layui-row">
+            <div class="layui-col-md10">
+                <span class="title">新闻管理后台</span>
+            </div>
+            <div class="user layui-col-md2">
+                <img src="../images/u163.png" width="60px" height="60px" style="border-radius: 30px;">
+                <span
+                    style="font-size: 18px;font-weight: bold;position: relative;left: 4%;bottom: 5%;">百师通教育&nbsp;&nbsp;<i
+                        class="fa fa-caret-down fa-lg"></i></span>
+                <span style="position:relative;top: 14%;right: 38%;" class="nickname">李晓阳</span>
+            </div>
+        </header>
+        <div id="overall">
+            <div class="title">账号整体情况</div>
+            <div class="layui-row overall-box">
+                <div class="item layui-col-md4">
+                    <span><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;累计阅读量</span><br>
+                    <span class="let1">1200</span>
+                </div>
+                <div class="item layui-col-md4">
+                    <span><i class="fa fa-comment-o" aria-hidden="true"></i>&nbsp;&nbsp;累计评论数</span><br>
+                    <span class="let2">136</span>
+                </div>
+                <div class="item layui-col-md4">
+                    <span><i class="fa fa-files-o" aria-hidden="true"></i>&nbsp;&nbsp;现有文章</span><br>
+                    <span class="let3">22</span>
+                </div>
+            </div>
+        </div>
+        <div id="details">
+            <div class="header">
+                <span>已编辑新闻</span>
+                <a href="#" class="hair">发新闻</a>
+            </div>
+            <div class="layui-tab layui-tab-brief" lay-filter="options">
+                <ul class="layui-tab-title">
+                    <li class="layui-this" data-status="0">所有状态</li>
+                    <li data-status="1">已发布</li>
+                    <li data-status="4">草稿</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <div class="layui-row">
+                            <div class="layui-col-md2">
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                <span>已发布</span>
+                            </div>
+                            <div class="layui-col-md2">
+                                <img src="../images/u7.jpg" alt="封图" width="170" height="110"
+                                    style="border-radius: 5px;">
+                            </div>
+                            <div class="layui-col-md8">
+                                <span class="news-title"><a
+                                        href="#">花了一万学英语花了一万学英语花了一万学英语花了一万学英语花了一万学英语花了一万学英语花了</a></span><br>
+                                <span class="readNum">阅读&nbsp;0</span>
+                                <span class="commentNum">评论&nbsp;0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item"></div>
+                    <div class="layui-tab-item"></div>
+                    <div id="page" style="width: 70%;margin-top: 30px;margin-bottom: 20px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表格右侧工具栏 -->
+    <script type="text/html" id="rightBar">
+        <a class="layui-btn layui-btn-md" lay-event="release">发布</a>
+    </script>
+
+    <script>
+        //设置localStorage过期时间
+        Storage.prototype.setExpire = (key, value, expire) => {
+            let obj = {
+                data: value,
+                time: Date.now(),
+                expire: expire
+            };
+            //localStorage 设置的值不能为对象,转为json字符串
+            localStorage.setItem(key, JSON.stringify(obj));
+        }
+
+        Storage.prototype.getExpire = key => {
+            let val = localStorage.getItem(key);
+            if (!val) {
+                return val;
+            }
+            val = JSON.parse(val);
+            //判断时间是否超出设定时间
+            if (Date.now() - val.time > val.expire) {
+                localStorage.clear();
+                return null;
+            }
+            return val.data;
+        }
+
+        //JavaScript代码区域
+        layui.use(['element', 'jquery', 'laypage', 'layer', 'table'], function () {
+            var element = layui.element
+                , laypage = layui.laypage
+                , layer = layui.layer
+                , table = layui.table
+                , $ = layui.jquery;
+
+            var isShow = true;  //定义一个标志位
+            $('.kit-side-fold').click(function () {
+                //选择出所有的span，并判断是不是hidden
+                $('.layui-nav-item span').each(function () {
+                    if ($(this).is(':hidden')) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+                //判断isshow的状态
+                if (isShow) {
+                    $('.layui-side.layui-bg-black').width(60); //设置宽度
+                    $('.kit-side-fold i').css('margin-right', '5%');  //修改图标的位置
+                    //将footer和body的宽度修改
+                    $('.layui-body').css('left', 60 + 'px');
+                    $('.layui-footer').css('left', 60 + 'px');
+                    //将二级导航栏隐藏
+                    $('dd span').each(function () {
+                        $(this).hide();
+                    });
+                    //修改标志位
+                    isShow = false;
+                } else {
+                    $('.layui-side.layui-bg-black').width(200);
+                    $('.kit-side-fold i').css('margin-right', '10%');
+                    $('.layui-body').css('left', 200 + 'px');
+                    $('.layui-footer').css('left', 200 + 'px');
+                    $('dd span').each(function () {
+                        $(this).show();
+                    });
+                    isShow = true;
+                }
+            });
+
+            var pageCount = 0;
+            var status = 99;
+
+            //监听选项卡切换
+            element.on('tab(options)', function (data) {
+                status = $(this).attr('data-status');
+                SelectBackGroundPage(status, 1);
+                $('#page').empty();
+                flushPgae(pageCount);
+            });
+
+            //打开发布新闻窗口
+            $(".hair").click(function () {
+                layer.open({
+                    type: 1,
+                    title: ['发布新闻', 'font-size:18px;'],
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['910x', '790px'],
+                    offset: '70px',
+                    content: $('#hid')
+                });
+            });
+
+            //监听工具栏事件
+            table.on('tool(table)', function (obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+                var data = obj.data; //获得当前行数据
+                var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+                var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+
+                if (layEvent === 'release') { //删除
+                    layer.confirm('新闻发布后不可修改，确定要发布这篇新闻吗？', function (index) {
+                        obj.del();
+                        layer.close(index);
+                        $.ajax({
+                            url: localStorage.getItem('url') + '/NewsManager/NewsDetailState',
+                            headers: { 'Authorization': localStorage.getExpire('token') },
+                            data: JSON.stringify({ "id": data.id, "status": 1 }),
+                            contentType: 'application/json; charset=UTF-8',
+                            type: 'POST',
+                            success: function (data) {
+                                console.log(data);
+                                if (data.status) {
+                                    layer.msg('发布新闻成功，请前往首页或新闻管理界面查看详情。', { icon: 1, time: 1200 }, function () { window.location.reload() });
+                                } else {
+                                    layer.msg('很抱歉，发布新闻失败！', { icon: 2, time: 1300 });
+                                }
+                            },
+                            error: function (e) {
+                                console.log(e.status);
+                                console.log(e.message);
+                            }
+                        });
+                    });
+                }
+            });
+
+            //页面加载时所需函数
+            $(function () {
+                //验证用户三天内是否登录过
+                if (localStorage.hasOwnProperty('name')) {
+                    console.log(localStorage.getExpire("name"));
+                    $('.nickname').html(localStorage.getExpire("name"));
+                }
+                SelectBackGroundPage(0, 1);
+                $('#page').empty();
+                flushPgae(pageCount);
+                tb();
+            });
+
+            //后台首页数据查询
+            function SelectBackGroundPage(status, pageIndex) {
+                console.log(status, pageIndex);
+                $.ajax({
+                    url: localStorage.getItem('url') + '/NewsDetails/SelectBackGroundPage',
+                    headers: { 'Authorization': localStorage.getExpire('token') },
+                    data: { "status": status, "pageIndex": pageIndex },
+                    dataType: 'json',
+                    method: 'get',
+                    async: false,
+                    success: function (res) {
+                        var content = "";
+                        if (res.status) {
+                            console.log(res);
+                            $('.let1').html(res.data[0].cumRead);
+                            $('.let2').html(res.data[0].cumComment);
+                            $('.let3').html(res.data[0].cumNews);
+                            for (const key in res.data) {
+                                if (res.data[key].status == 1) {
+                                    var cless = 'fa fa-paper-plane-o';
+                                    var statu = '已发布';
+                                } else {
+                                    var cless = 'fa fa-file-text-o';
+                                    var statu = '草稿';
+                                }
+                                content += '<div class="layui-row"><div class="layui-col-md2 state"><i class="' + cless + '" aria-hidden="true"></i><span>' + statu + '</span></div><div class="layui-col-md2"><img src="' + res.data[key].cover + '" alt="封图" width="170" height="110"style="border-radius: 5px;"></div><div class="layui-col-md8"><span class="news-title"><a href="#">' + res.data[key].title + '</a></span><br><span class="readNum">阅读&nbsp;' + res.data[key].readNum + '</span><span class="commentNum">评论&nbsp;' + res.data[key].commentCount + '</span></div></div>';
+                            }
+                            pageCount = res.data[0].count;
+                            $('.layui-tab-item').html(content);
+                        } else {
+                            layer.msg(res.message, { icon: 2, time: 1200, offset: "240px" });
+                        }
+                        return pageCount;
+                    }
+                });
+            }
+
+            function tb() {
+                table.render({
+                    elem: '#table'
+                    , url: localStorage.getItem('url') + '/NewsManager/SelectNewsManager'
+                    , page: {
+                        layout: ['count', 'prev', 'first', 'page', 'last', 'next', 'skip']
+                        , first: '首页'
+                        , last: '尾页'
+                    }
+                    ,limit:10
+                    , where: { status: 4 }
+                    , request: {
+                        pageName: 'pageIndex' //页码的参数名称
+                        , limitName: 'pageSize' //页总数
+                    }
+                    , headers: { 'Authorization': localStorage.getExpire('token') }
+                    , parseData: function (res) { //res 即为原始返回的数据
+                        console.log(res)
+                        return {
+                            "code": 0, //解析接口状态
+                            "msg": res.message, //解析提示文本
+                            "count": res.data[0].count, //解析数据长度
+                            "data": res.data //解析数据列表
+                        };
+                    }
+                    , cols: [[
+                        { field: 'id', width: 103, title: '新闻ID', sort: true, align: 'center' }
+                        , { field: 'cover', width: 150, title: '封面图', align: 'center', templet: '<div><img src="{{d.cover}}" width="150" height="80"></div>' }
+                        , { field: 'title', title: '文章标题', width: 210, align: 'center' }
+                        , {
+                            field: 'status', width: 110, title: '文章状态', align: 'center', templet: function (d) {
+                                if (d.status == 4) { return "草稿" }
+                            }
+                        }
+                        , { field: 'operateTime', width: 210, title: '最后编辑时间', align: 'center' }
+                        , { fixed: 'right', title: '操作', toolbar: '#rightBar', width: 110, align: 'center' }
+                    ]]
+                });
+            }
+
+            //将分页封装成方法调用
+            function flushPgae(nums) {
+                laypage.render({
+                    elem: 'page'
+                    , theme: '#1E9FFF'
+                    , count: nums
+                    , limit: 10
+                    , first: '首页'
+                    , last: '尾页'
+                    , jump: function (obj, first) {
+                        if (!first) {
+                            SelectBackGroundPage(status, obj.curr);
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

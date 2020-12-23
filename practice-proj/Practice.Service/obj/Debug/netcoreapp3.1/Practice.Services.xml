@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Practice.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Practice.ServicesModule">
+            <summary>
+            服务模块注入
+            </summary>
+        </member>
+        <member name="M:Practice.ServicesModule.Load(Autofac.ContainerBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Practice.Services.NewsCategoryService">
+            <summary>
+            新闻分类业务类
+            </summary>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.#ctor(Practice.Repositories.INewsCategoryRepository,AutoMapper.IMapper,Practice.Services.IOperateLogService)">
+            <summary>
+            构造注入
+            </summary>
+            <param name="newsCategoryRepository"></param>
+            <param name="mapper"></param>
+            <param name="operateLogService"></param>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.SelectCategory">
+            <summary>
+            查询新闻分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.Insert(Practice.RequestModels.ReqNewsCategoryModel,System.Int64)">
+            <summary>
+            添加新闻分类
+            </summary>
+            <param name="model">新闻分类请求参数</param>
+            <param name="userId">操作人</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.Delete(Practice.RequestModels.ReqNewsCategoryDeleteModel,System.Int64)">
+            <summary>
+            删除新闻分类
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.Update(Practice.RequestModels.ReqNewsCategoryChangeModel,System.Int64)">
+            <summary>
+            修改新闻分类
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.SelectCategoryList(System.Int32)">
+            <summary>
+            联动查询分类列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.SelectCategoryAll(System.Int32,System.Int32,System.String)">
+            <summary>
+            查询详细分类数据
+            </summary>
+            <param name="name"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsCategoryService.RecommendSort(Practice.RequestModels.ReqNewsCategorySortModel,System.Int64)">
+            <summary>
+            更改推荐值
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.NewsDetailService">
+            <summary>
+            新闻查询业务层
+            </summary>
+        </member>
+        <member name="M:Practice.Services.NewsDetailService.#ctor(Practice.Repositories.INewsDetailRepository,AutoMapper.IMapper)">
+            <summary>
+            构造注入
+            </summary>
+            <param name="newsDetailsRepository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Practice.Services.NewsDetailService.SelectDetailsTitle(System.String,System.Int32)">
+            <summary>
+            根据标题查询新闻
+            </summary>
+            <param name="title"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsDetailService.SelectDetailsCategory(System.Int32,System.Int32)">
+            <summary>
+            根据新闻分类查询
+            </summary>
+            <param name="id"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsDetailService.SelectDetailsContent(System.Int32,System.Int32)">
+            <summary>
+            查询新闻正文
+            </summary>
+            <param name="id">新闻ID</param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsDetailService.BackGroundPage(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            查询后台首页数据
+            </summary>
+            <param name="userId"></param>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsDetailService.ClassifyRecommend(System.Int32)">
+            <summary>
+            分类推荐查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.NewsManagerService">
+            <summary>
+            新闻管理业务层
+            </summary>
+        </member>
+        <member name="M:Practice.Services.NewsManagerService.#ctor(Practice.Repositories.INewsManagerRepository,AutoMapper.IMapper,Practice.Services.IOperateLogService)">
+            <summary>
+            构造注入
+            </summary>
+            <param name="newsManagerRepository"></param>
+            <param name="mapper"></param>
+            <param name="operateLogService"></param>
+        </member>
+        <member name="M:Practice.Services.NewsManagerService.SelectNewsManager(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            查询新闻管理界面数据
+            </summary>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsManagerService.SelectNewsManagerTitle(System.String,System.Int32,System.Int64)">
+            <summary>
+            新闻管理界面标题模糊查询
+            </summary>
+            <param name="title"></param>
+            <param name="pageIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsManagerService.Insert(Practice.RequestModels.ReqNewsDetailModel,System.Int32)">
+            <summary>
+            新建新闻
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsManagerService.State(Practice.RequestModels.ReqNewsDetailStateModel,System.Int64)">
+            <summary>
+            更改新闻状态
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.NewsManagerService.Update(Practice.RequestModels.ReqNewsDetailUpdateModel,System.Int32)">
+            <summary>
+            修改新闻
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.OperateLogService">
+            <summary>
+            操作日志业务类
+            </summary>
+        </member>
+        <member name="M:Practice.Services.OperateLogService.#ctor(Practice.Repositories.IOperateLogRepository)">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:Practice.Services.OperateLogService.AddLog(System.String,System.String,System.String,System.Int64)">
+            <summary>
+            添加操作日志
+            </summary>
+            <param name="column"></param>
+            <param name="action"></param>
+            <param name="url"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.OperateLogService.SelectLogTime(System.String,System.Int32,System.Int32)">
+            <summary>
+            按时间查询操作日志
+            </summary>
+            <param name="operateTime"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.OperateLogService.SelectLogText(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            多条件查询操作日志
+            </summary>
+            <param name="account"></param>
+            <param name="column"></param>
+            <param name="action"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.OperateLogService.CategoryEdit(System.Int64,System.Int32)">
+            <summary>
+            分类修改记录查询
+            </summary>
+            <param name="id"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.TestService">
+            <summary>
+            测试业务类
+            </summary>
+        </member>
+        <member name="M:Practice.Services.TestService.#ctor(AutoMapper.IMapper,Practice.Repositories.ITestRepository)">
+            <summary>
+            构造注入
+            </summary>
+            <param name="mapper"></param>
+            <param name="testRepository"></param>
+        </member>
+        <member name="M:Practice.Services.TestService.Do">
+            <summary>
+            测试方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.TestService.Get(System.Int64)">
+            <summary>
+            取值
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.TokenService">
+            <summary>
+            token业务类
+            </summary>
+        </member>
+        <member name="M:Practice.Services.TokenService.CreateToken(System.Security.Claims.Claim[])">
+            <summary>
+            创建token
+            </summary>
+            <param name="claims"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.UserAccountService">
+            <summary>
+            用户账户业务层
+            </summary>
+        </member>
+        <member name="M:Practice.Services.UserAccountService.#ctor(Practice.Repositories.IUserAccountRepository,AutoMapper.IMapper,Practice.Services.ITokenService,Practice.Services.IVerifyCodeService,Practice.Services.IOperateLogService)">
+            <summary>
+            构造注入
+            </summary>
+            <param name="userAccountRepository">用户仓储</param>
+            <param name="mapper">映射</param>
+            <param name="tokenService">token</param>
+            <param name="verifyCodeService">验证码</param>
+            <param name="operateLogService">操作日志</param>
+        </member>
+        <member name="M:Practice.Services.UserAccountService.Login(Practice.RequestModels.ReqLoginModel)">
+            <summary>
+            登录验证
+            </summary>
+            <param name="reqLogin">登录请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.UserAccountService.Register(Practice.RequestModels.ReqRegisterModel)">
+            <summary>
+            注册
+            </summary>
+            <param name="reqRegister">注册请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.VerifyCodeService">
+            <summary>
+            验证码业务层
+            </summary>
+        </member>
+        <member name="M:Practice.Services.VerifyCodeService.#ctor(Practice.Repositories.IVerifyCodeRepository)">
+            <summary>
+            构造注入
+            </summary>
+            <param name="verifyCodeRepository"></param>
+        </member>
+        <member name="M:Practice.Services.VerifyCodeService.UpdateStatus(System.Int64,System.Int32)">
+            <summary>
+            更改验证码状态
+            </summary>
+            <param name="id">验证码ID</param>
+            <param name="status">验证码状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.VerifyCodeService.IsAvailable(System.String,System.String)">
+            <summary>
+            判断验证码是否可用
+            </summary>
+            <param name="code">验证码</param>
+            <param name="guid">唯一参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.VerifyCodeService.Generate">
+            <summary>
+            生成验证码
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

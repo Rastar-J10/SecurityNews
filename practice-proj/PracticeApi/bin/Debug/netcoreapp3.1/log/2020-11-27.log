@@ -1,0 +1,58 @@
+2020-11-27 09:46:07,828 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 13:40:07,147 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 13:41:04,652 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 13:50:46,756 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 13:56:46,926 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 13:58:28,107 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 14:56:40,941 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 14:59:36,703 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:03:37,648 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:06:26,498 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:24:09,371 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:27:59,672 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:29:42,084 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:32:33,863 [15] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:32:59,469 [19] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:33:01,293 [23] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:33:01,600 [19] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:33:01,729 [21] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:33:01,873 [20] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:33:02,067 [22] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:33:02,166 [21] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:34:07,491 [24] ERROR Practice.Services.NewsCategoryService [(null)] - 删除出现异常Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'object' to 'Practice.Entities.NewsCategoryEntity'. An explicit conversion exists (are you missing a cast?)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Practice.Repositories.NewsCategoryRepository.GetId(Int64 id) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 120
+   at Practice.Services.NewsCategoryService.Delete(Int64 id, Int64 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 111
+2020-11-27 15:35:27,126 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:38:46,019 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:40:10,810 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:41:42,507 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:48:22,808 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 15:53:36,120 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 17:20:45,181 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-27 17:34:22,328 [1] INFO  PracticeApi.Program [(null)] - practice api init!

@@ -1,0 +1,48 @@
+2020-12-14 09:53:27,219 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 10:11:29,079 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 10:16:20,600 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 10:26:08,921 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 10:28:35,603 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 10:35:28,802 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 10:57:35,939 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 11:48:18,029 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:06:00,438 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:09:50,911 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:11:19,148 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:12:45,296 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:12:50,680 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:14:40,992 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:23:57,813 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:26:02,066 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:34:31,088 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:39:43,245 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:41:01,760 [13] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and LOCATE('@title',n.name) limit 0,10' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryAll(Int32 pageIndex, Int32 pageSize, String name) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\NewsCategoryRepository.cs:line 204
+   at Practice.Services.NewsCategoryService.SelectCategoryAll(Int32 pageIndex, Int32 pageSize, String name) in D:\bst-test\practice-proj\Practice.Service\Services\NewsCategoryService.cs:line 245
+2020-12-14 14:42:15,635 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:43:55,244 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:45:21,368 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:48:58,327 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:50:33,099 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:52:38,471 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 14:54:58,015 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 15:02:54,429 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 15:04:07,145 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 15:30:37,785 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 15:54:58,494 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 16:27:49,235 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 17:12:26,615 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 17:16:22,177 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 17:17:53,795 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 18:09:44,508 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-14 18:11:21,153 [1] INFO  PracticeApi.Program [(null)] - practice api init!

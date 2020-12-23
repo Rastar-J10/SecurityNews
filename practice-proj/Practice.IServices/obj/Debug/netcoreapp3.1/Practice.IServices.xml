@@ -1,0 +1,826 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Practice.IServices</name>
+    </assembly>
+    <members>
+        <member name="T:Practice.MapperProfiles.CommonProfile">
+            <summary>
+            维护model映射关系
+            </summary>
+        </member>
+        <member name="M:Practice.MapperProfiles.CommonProfile.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqNewsCategoryModel">
+            <summary>
+            新闻类别请求model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryModel.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryModel.ParentId">
+            <summary>
+            分类上级ID
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryModel.Sort">
+            <summary>
+            分类排序
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqNewsCategoryChangeModel">
+            <summary>
+            修改新闻分类请求model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryChangeModel.Id">
+            <summary>
+            新闻分类ID
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryChangeModel.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryChangeModel.ParentId">
+            <summary>
+            分类上级ID
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryChangeModel.Sort">
+            <summary>
+            分类排序
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqNewsCategorySortModel">
+            <summary>
+            类别推荐请求model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategorySortModel.Id">
+            <summary>
+            新闻分类ID
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategorySortModel.Sort">
+            <summary>
+            分类排序
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqNewsCategoryDeleteModel">
+            <summary>
+            删除类别请求model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsCategoryDeleteModel.Id">
+            <summary>
+            新闻分类ID
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqNewsDetailModel">
+            <summary>
+            新建新闻请求model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Category1">
+            <summary>
+            文章一级编号
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Category2">
+            <summary>
+            文章二级编号
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Title">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Author">
+            <summary>
+            文章作者
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Content">
+            <summary>
+            文章内容
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Summary">
+            <summary>
+            文章摘要
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Cover">
+            <summary>
+            文章封面
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Cover2">
+            <summary>
+            文章封面2
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Cover3">
+            <summary>
+            文章封面3
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Tags">
+            <summary>
+            文章标签
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.CreatorId">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailModel.Operator">
+            <summary>
+            最后操作人
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqNewsDetailStateModel">
+            <summary>
+            更改新闻状态请求model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailStateModel.Id">
+            <summary>
+            新闻ID
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailStateModel.status">
+            <summary>
+            新闻状态
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqNewsDetailUpdateModel">
+            <summary>
+            修改新闻请求model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Id">
+            <summary>
+            新闻ID
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Category1">
+            <summary>
+            文章一级编号
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Category2">
+            <summary>
+            文章二级编号
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Title">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Author">
+            <summary>
+            文章作者
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Content">
+            <summary>
+            文章内容
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Summary">
+            <summary>
+            文章摘要
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Cover">
+            <summary>
+            文章封面
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Cover2">
+            <summary>
+            文章封面2
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Cover3">
+            <summary>
+            文章封面3
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Tags">
+            <summary>
+            文章标签
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqNewsDetailUpdateModel.Operator">
+            <summary>
+            最后操作人
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqLoginModel">
+            <summary>
+            登录请求参数
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqLoginModel.Account">
+            <summary>
+            帐号
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqLoginModel.Password">
+            <summary>
+            登录密码
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqLoginModel.Guid">
+            <summary>
+            唯一参数
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqLoginModel.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:Practice.RequestModels.ReqRegisterModel">
+            <summary>
+            帐号注册model
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqRegisterModel.Account">
+            <summary>
+            帐号
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqRegisterModel.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqRegisterModel.RePassword">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqRegisterModel.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqRegisterModel.Guid">
+            <summary>
+            唯一参数
+            </summary>
+        </member>
+        <member name="P:Practice.RequestModels.ReqRegisterModel.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResBaseModel">
+            <summary>
+            统一返回基础model
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResBaseModel.Message">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResBaseModel.Status">
+            <summary>
+            代码当HttpStatusCode==200（HttpStatusCode.OK）时， 0 正常 1错误。其他错误用HttpStatusCode
+            </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResModel`1">
+            <summary>
+            接口统一返回model
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Practice.ResponseModels.ResModel`1.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResModel">
+            <summary>
+            通用model扩展方法
+            </summary>
+        </member>
+        <member name="M:Practice.ResponseModels.ResModel.Success``1(``0,System.String)">
+            <summary>
+            操作成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.ResponseModels.ResModel.Failure``1(System.String)">
+            <summary>
+            操作失败
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.ResponseModels.ResNewsCategoryModel">
+            <summary>
+            新闻分类
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsCategoryModel.Id">
+            <summary>
+            新闻分类ID
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsCategoryModel.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsCategoryModel.ParentId">
+            <summary>
+            新闻分类上级分类ID
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsCategoryModel.Sort">
+            <summary>
+            推荐值
+            </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResNewsDetailModel">
+            <summary>
+            新闻详情
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Id">
+            <summary>
+            新闻id
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Title">
+            <summary>
+            新闻标题
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Author">
+            <summary>
+            新闻作者
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Content">
+            <summary>
+            新闻内容
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Summary">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Cover">
+            <summary>
+            新闻封面
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Cover2">
+            <summary>
+            新闻封面2
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Cover3">
+            <summary>
+            新闻封面3
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.ReadNum">
+            <summary>
+            阅读数
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailModel.OperateTime">
+            <summary>
+            最后操作时间
+            </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResNewsDetailsCategoryModel">
+            <summary>
+            新闻分类查询返回model
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.Id">
+            <summary>
+            新闻id
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.Title">
+            <summary>
+            新闻标题
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.Author">
+            <summary>
+            新闻作者
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.Cover">
+            <summary>
+            新闻封面
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.Cover2">
+            <summary>
+            新闻封面2
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.Cover3">
+            <summary>
+            新闻封面3
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.ReadNum">
+            <summary>
+            阅读数
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.CommentCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.OperateTime">
+            <summary>
+            最后操作时间
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResNewsDetailsCategoryModel.Count">
+            <summary>
+            数据总量
+            </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResClassifyRecommendModel">
+            <summary>
+            分类推荐查询返回model
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResClassifyRecommendModel.Id">
+            <summary>
+            新闻id
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResClassifyRecommendModel.Title">
+            <summary>
+            新闻标题
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResClassifyRecommendModel.Author">
+            <summary>
+            新闻作者
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResClassifyRecommendModel.Cover">
+            <summary>
+            新闻封面
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResClassifyRecommendModel.ReadNum">
+            <summary>
+            阅读数
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResClassifyRecommendModel.CommentCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResUserLoginModel">
+            <summary>
+            登录实体类
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResUserLoginModel.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResUserLoginModel.Account">
+            <summary>
+            帐号
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResUserLoginModel.Nickname">
+            <summary>
+            昵称
+             </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResUserLoginModel.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResUserLoginModel.SecurityKey">
+            <summary>
+            token密钥
+             </summary>
+        </member>
+        <member name="T:Practice.ResponseModels.ResVerifyCodeModel">
+            <summary>
+            验证码响应model
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResVerifyCodeModel.Guid">
+            <summary>
+            唯一参数
+            </summary>
+        </member>
+        <member name="P:Practice.ResponseModels.ResVerifyCodeModel.ImageBase64">
+            <summary>
+            验证码图片base64字符串
+            </summary>
+        </member>
+        <member name="T:Practice.Services.INewsCategoryService">
+            <summary>
+            新闻分类业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.INewsCategoryService.SelectCategory">
+            <summary>
+            查询新闻分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsCategoryService.Insert(Practice.RequestModels.ReqNewsCategoryModel,System.Int64)">
+            <summary>
+            添加新闻分类
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsCategoryService.Delete(Practice.RequestModels.ReqNewsCategoryDeleteModel,System.Int64)">
+            <summary>
+            删除新闻分类
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsCategoryService.Update(Practice.RequestModels.ReqNewsCategoryChangeModel,System.Int64)">
+            <summary>
+            修改新闻分类
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsCategoryService.SelectCategoryList(System.Int32)">
+            <summary>
+            查询分类列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsCategoryService.SelectCategoryAll(System.Int32,System.Int32,System.String)">
+            <summary>
+            标题模糊查询
+            </summary>
+            <param name="name"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsCategoryService.RecommendSort(Practice.RequestModels.ReqNewsCategorySortModel,System.Int64)">
+            <summary>
+            推荐值更改
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.INewsDetailService">
+            <summary>
+            新闻查询业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.INewsDetailService.SelectDetailsTitle(System.String,System.Int32)">
+            <summary>
+            根据标题查询新闻
+            </summary>
+            <param name="title"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsDetailService.SelectDetailsCategory(System.Int32,System.Int32)">
+            <summary>
+            根据新闻分类查询
+            </summary>
+            <param name="id"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsDetailService.SelectDetailsContent(System.Int32,System.Int32)">
+            <summary>
+            查询新闻正文
+            </summary>
+            <param name="id">新闻ID</param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsDetailService.BackGroundPage(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            查询后台首页数据
+            </summary>
+            <param name="userId"></param>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsDetailService.ClassifyRecommend(System.Int32)">
+            <summary>
+            分类推荐查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.INewsManagerService">
+            <summary>
+            新闻管理业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.INewsManagerService.SelectNewsManager(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            查询新闻管理界面数据
+            </summary>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsManagerService.SelectNewsManagerTitle(System.String,System.Int32,System.Int64)">
+            <summary>
+            新闻管理界面标题模糊查询
+            </summary>
+            <param name="title"></param>
+            <param name="pageIndex"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsManagerService.Insert(Practice.RequestModels.ReqNewsDetailModel,System.Int32)">
+            <summary>
+            新建新闻
+            </summary>
+            <param name="model">新建新闻请求参数</param>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsManagerService.State(Practice.RequestModels.ReqNewsDetailStateModel,System.Int64)">
+            <summary>
+            新闻状态更改
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.INewsManagerService.Update(Practice.RequestModels.ReqNewsDetailUpdateModel,System.Int32)">
+            <summary>
+            修改新闻
+            </summary>
+            <param name="model"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.IOperateLogService">
+            <summary>
+            操作日志业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.IOperateLogService.AddLog(System.String,System.String,System.String,System.Int64)">
+            <summary>
+            添加操作日志
+            </summary>
+            <param name="column"></param>
+            <param name="action"></param>
+            <param name="url"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.IOperateLogService.SelectLogTime(System.String,System.Int32,System.Int32)">
+            <summary>
+            按时间查询操作日志
+            </summary>
+            <param name="operateTime"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.IOperateLogService.SelectLogText(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            多条件查询操作日志
+            </summary>
+            <param name="account"></param>
+            <param name="column"></param>
+            <param name="action"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.IOperateLogService.CategoryEdit(System.Int64,System.Int32)">
+            <summary>
+            分类修改记录查询
+            </summary>
+            <param name="id"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.ITestService">
+            <summary>
+            测试业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.ITestService.Do">
+            <summary>
+            测试方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.ITestService.Get(System.Int64)">
+            <summary>
+            取值
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.ITokenService">
+            <summary>
+            token业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.ITokenService.CreateToken(System.Security.Claims.Claim[])">
+            <summary>
+            创建token
+            </summary>
+            <param name="claims"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.IUserAccountService">
+            <summary>
+            用户账户业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.IUserAccountService.Login(Practice.RequestModels.ReqLoginModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="reqLogin">登录请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.IUserAccountService.Register(Practice.RequestModels.ReqRegisterModel)">
+            <summary>
+            注册
+            </summary>
+            <param name="reqRegister">注册请求参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Practice.Services.IVerifyCodeService">
+            <summary>
+            验证码业务接口
+            </summary>
+        </member>
+        <member name="M:Practice.Services.IVerifyCodeService.UpdateStatus(System.Int64,System.Int32)">
+            <summary>
+            更改验证码状态
+            </summary>
+            <param name="id">验证码ID</param>
+            <param name="status">验证码状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.IVerifyCodeService.IsAvailable(System.String,System.String)">
+            <summary>
+            判断验证码是否可用
+            </summary>
+            <param name="code">验证码</param>
+            <param name="guid">唯一参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Practice.Services.IVerifyCodeService.Generate">
+            <summary>
+            生成验证码
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

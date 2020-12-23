@@ -1,0 +1,48 @@
+2020-11-26 09:52:58,598 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 09:55:17,977 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 09:57:39,606 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 14:27:50,442 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 15:39:37,403 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 15:45:09,904 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 15:47:32,443 [10] ERROR Practice.Services.UserAccountService [(null)] - 登录发生异常, account: string
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'seletc `userId`,`account`,`nickname`,`role`,`status` from user_account where `ac' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 483
+   at Practice.Repositories.UserAccountRepository.Login(String account, String password) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\UserAccountRepository.cs:line 35
+   at Practice.Services.UserAccountService.Login(ReqLoginModel reqLogin) in D:\bst-test\practice-proj\Practice.Service\Services\UserAccountService.cs:line 62
+2020-11-26 15:49:23,495 [25] ERROR Practice.Services.UserAccountService [(null)] - 登录发生异常, account: admin
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'seletc `userId`,`account`,`nickname`,`role`,`status` from user_account where `ac' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 483
+   at Practice.Repositories.UserAccountRepository.Login(String account, String password) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\UserAccountRepository.cs:line 35
+   at Practice.Services.UserAccountService.Login(ReqLoginModel reqLogin) in D:\bst-test\practice-proj\Practice.Service\Services\UserAccountService.cs:line 62
+2020-11-26 15:52:55,269 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 15:55:47,079 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 16:31:24,048 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 19:33:18,457 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 20:24:19,968 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-11-26 20:27:31,714 [16] ERROR Practice.Services.NewsDetailService [(null)] - 新建新闻发生异常
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> NewsDetailEntity
+System.Object -> Practice.Entities.NewsDetailEntity
+   at lambda_method(Closure , Object , NewsDetailEntity , ResolutionContext )
+   at Practice.Services.NewsDetailService.Insert(ReqNewsDetailModel model, Int32 userId) in D:\bst-test\practice-proj\Practice.Service\Services\NewsDetailService.cs:line 169
+2020-11-26 20:29:14,927 [1] INFO  PracticeApi.Program [(null)] - practice api init!

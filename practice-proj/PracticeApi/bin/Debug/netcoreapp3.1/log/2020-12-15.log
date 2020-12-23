@@ -1,0 +1,251 @@
+2020-12-15 09:04:15,809 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 09:11:03,011 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 09:13:25,840 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 09:33:14,625 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 09:40:45,974 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 09:43:40,321 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 09:43:46,119 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:17:38,251 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:17:55,278 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:26:41,383 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:27:48,476 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:32:52,902 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:32:54,615 [4] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常System.Data.DataException: Error parsing column 3 (sort=sort - String)
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Deserializeb0f3d123-745f-482e-acb1-b9ffb569bfdd(IDataReader )
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in /_/Dapper/SqlMapper.cs:line 3634
+   at Deserializeb0f3d123-745f-482e-acb1-b9ffb569bfdd(IDataReader )
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command)
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id)
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id)
+2020-12-15 11:32:55,063 [12] ERROR Practice.Services.NewsCategoryService [(null)] - 查询出现异常System.Data.DataException: Error parsing column 3 (sort=sort - String)
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Deserializeb0f3d123-745f-482e-acb1-b9ffb569bfdd(IDataReader )
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in /_/Dapper/SqlMapper.cs:line 3634
+   at Deserializeb0f3d123-745f-482e-acb1-b9ffb569bfdd(IDataReader )
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command)
+   at Practice.Repositories.NewsCategoryRepository.SelectCategoryList(Int32 id)
+   at Practice.Services.NewsCategoryService.SelectCategoryList(Int32 id)
+2020-12-15 11:33:25,545 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:34:54,522 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:35:38,211 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 11:45:15,255 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 14:44:12,797 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 14:47:51,340 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 14:51:45,947 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 15:39:48,740 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 16:29:19,164 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 16:32:49,179 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 16:34:19,718 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 16:37:19,511 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 16:49:03,038 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 17:55:28,190 [16] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): 由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 57
+   at Practice.Services.OperateLogService.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 63
+2020-12-15 17:55:31,339 [41] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): 由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 57
+   at Practice.Services.OperateLogService.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 63
+2020-12-15 17:56:02,800 [42] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): 由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 57
+   at Practice.Services.OperateLogService.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 63
+2020-12-15 17:56:09,088 [44] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): 由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 57
+   at Practice.Services.OperateLogService.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 63
+2020-12-15 17:56:29,446 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 17:56:45,499 [4] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): 由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 57
+   at Practice.Services.OperateLogService.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 63
+2020-12-15 17:57:42,021 [5] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): 由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 57
+   at Practice.Services.OperateLogService.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 63
+2020-12-15 17:58:30,011 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 17:58:56,149 [10] ERROR Practice.Services.OperateLogService [(null)] - 查询出现异常MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+ ---> System.AggregateException: One or more errors occurred. (由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306)
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): 由于目标计算机积极拒绝，无法连接。 192.168.50.182:3306
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw(Exception source)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 419
+   at Practice.Repositories.OperateLogRepository.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Repositories\Repositories\OperateLogRepository.cs:line 57
+   at Practice.Services.OperateLogService.SelectLogTime(String operateTime, Int32 pageIndex, Int32 pageSize) in D:\bst-test\practice-proj\Practice.Service\Services\OperateLogService.cs:line 63
+2020-12-15 17:59:48,602 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 18:01:04,919 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 18:01:36,080 [1] INFO  PracticeApi.Program [(null)] - practice api init!
+2020-12-15 18:05:28,292 [1] INFO  PracticeApi.Program [(null)] - practice api init!
