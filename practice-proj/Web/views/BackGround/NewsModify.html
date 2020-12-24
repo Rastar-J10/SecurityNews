@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
     <script src="../../components/layuiadmin/layui/layui.js"></script>
     <script src="../../components/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>修改新闻</title>
     <style>
         * {
@@ -308,7 +309,7 @@
                 var file = blobInfo.blob();//转化为易于理解的file对象
                 xhr = new XMLHttpRequest();
                 xhr.withCredentials = false;
-                xhr.open('POST', localStorage.getItem('url') + '/FileUpload/ImageUpload');
+                xhr.open('POST', window.url + '/FileUpload/ImageUpload');
                 xhr.setRequestHeader("Authorization", localStorage.getExpire('token')); //定义请求头带给后端
                 xhr.onload = function () {
                     var json;
@@ -382,7 +383,7 @@
                 }
                 //分类列表
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsCategory/SelectNewsCategory',
+                    url: window.url + '/NewsCategory/SelectNewsCategory',
                     headers: { 'Authorization': localStorage.getExpire('token') },
                     dataType: 'json',
                     method: 'get',
@@ -407,7 +408,7 @@
             function SelectNewsDetails() {
                 console.log(newsid);
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsDetails/SelectNewsDetailsContent',
+                    url: window.url + '/NewsDetails/SelectNewsDetailsContent',
                     data: { id: newsid, status: 4 },
                     dataType: 'JSON',
                     type: 'GET',
@@ -443,7 +444,7 @@
             //普通图片上传
             var uploadInst = upload.render({
                 elem: '#upload1'
-                , url: localStorage.getItem('url') + '/FileUpload/ImageUpload'
+                , url: window.url + '/FileUpload/ImageUpload'
                 , headers: { 'Authorization': localStorage.getExpire('token') }
                 , before: function (obj) {
                     //预读本地文件示例
@@ -467,7 +468,7 @@
             //多图片上传
             upload.render({
                 elem: '#upload2'
-                , url: localStorage.getItem('url') + '/FileUpload/ImageUpload'
+                , url: window.url + '/FileUpload/ImageUpload'
                 , headers: { 'Authorization': localStorage.getExpire('token') }
                 , multiple: true //开启多图上传这个是重点
                 , accept: 'images'// 允许上传的文件类型
@@ -539,7 +540,7 @@
                 delete info.field.file;
                 //调用修改新闻接口
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsManager/NewsDetailsModify',
+                    url: window.url + '/NewsManager/NewsDetailsModify',
                     headers: { 'Authorization': localStorage.getExpire('token') },
                     data: JSON.stringify(info.field),
                     type: 'POST',

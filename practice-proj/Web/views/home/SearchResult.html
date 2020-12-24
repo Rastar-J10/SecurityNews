@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\layui.css">
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\font-awesome.min.css">
     <script src="../../components\layuiadmin\layui\layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>搜索结果</title>
     <style>
         * {
@@ -259,7 +260,7 @@
                 }
                 //调用查询分类接口
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsCategory/SelectNewsCategory',
+                    url: window.url+'/NewsCategory/SelectNewsCategory',
                     dataType: 'json',
                     type: 'get',
                     success: function (res) {
@@ -289,7 +290,7 @@
             //模糊查询包含标题的新闻
             function SelectDetailsTitle(index) {
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsDetails/SelectNewsDetailsTitle',
+                    url: window.url+'/NewsDetails/SelectNewsDetailsTitle',
                     contentType: 'application/json; charset=UTF-8',
                     async: false,
                     data: { title: title, pageIndex: index },

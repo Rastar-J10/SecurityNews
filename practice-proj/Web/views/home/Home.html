@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\layui.css">
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\font-awesome.min.css">
     <script src="../../components\layuiadmin\layui\layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>首页</title>
     <style>
         * {
@@ -349,8 +350,6 @@
             return val.data;
         }
 
-        //存储全局变量接口路由
-        localStorage.setItem('url','https://localhost:44337/api/v1');
         layui.use(['jquery', 'carousel', 'layer', 'form'], function () {
             var carousel = layui.carousel,
                 layer = layui.layer,
@@ -370,6 +369,7 @@
 
             //调用查询分类列表接口
             $(function () {
+                console.log(window.url);
                 //验证用户三天内是否登录过
                 if (localStorage.hasOwnProperty('name')) {
                     console.log(localStorage.getExpire("name"));
@@ -379,7 +379,7 @@
                     $('#nickname').html('欢迎您，' + localStorage.getExpire("name"));
                 }
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsCategory/SelectNewsCategory',
+                    url: window.url+'/NewsCategory/SelectNewsCategory',
                     dataType: 'json',
                     type: 'get',
                     success: function (res) {
@@ -407,7 +407,7 @@
             //生成验证码图片
             function verifycode() {
                 $.ajax({
-                    url: localStorage.getItem('url')+"/VerifyCode/GenerateVerifyCode",
+                    url: window.url+"/VerifyCode/GenerateVerifyCode",
                     dataType: "json",
                     type: "get",
                     success: function (res) {
@@ -422,7 +422,7 @@
             //分类推荐查询
             function classifyRecommend(id) {
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsDetails/SelectClassifyRecommend',
+                    url: window.url+'/NewsDetails/SelectClassifyRecommend',
                     contentType: 'application/json; charset=UTF-8',
                     async:false,
                     data: { id: id },
@@ -459,7 +459,7 @@
             //登录
             form.on('submit(formLogin)', function (info) {
                 $.ajax({
-                    url: localStorage.getItem('url')+'/UserAccount/UserLogin',
+                    url: window.url+'/UserAccount/UserLogin',
                     data: JSON.stringify(info.field),
                     type: 'POST',
                     contentType: 'application/json; charset=UTF-8',

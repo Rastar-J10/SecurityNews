@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\layui.css">
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\font-awesome.min.css">
     <script src="../../components\layuiadmin\layui\layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>新闻正文</title>
     <style>
         * {
@@ -248,7 +249,7 @@
                     $('.exit').css("display","inline");
                 }
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsCategory/SelectNewsCategory',
+                    url: window.url+'/NewsCategory/SelectNewsCategory',
                     dataType: 'json',
                     type: 'get',
                     success: function (res) {
@@ -278,7 +279,7 @@
             //获取新闻正文内容
             function SelectDetailsContent() {
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsDetails/SelectNewsDetailsContent',
+                    url: window.url+'/NewsDetails/SelectNewsDetailsContent',
                     contentType: 'application/json; charset=UTF-8',
                     data: { id: newsid,status:1 },
                     dataType: 'json',

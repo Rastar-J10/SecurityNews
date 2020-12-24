@@ -64,7 +64,7 @@ namespace PracticeApi.Controllers
                 {
                     return ResModel.Failure<string>("操作失败，只能上传图片，请重新上传");
                 }
-                var path = _env.ContentRootPath + @"/Uploads/Images/";//获取项目的根目录的绝对路径
+                var path = "C:/Users/ZhangKaiCheng/Desktop/ac/SecurityNews/practice-proj/Web/views" + @"/Uploads/Images/";//获取项目的根目录的绝对路径
                 string dirPath = Path.Combine(path + "/");//绝对路径，储存文件路径的文件夹
                 if (!Directory.Exists(dirPath))//查看文件夹是否存在
                 {
@@ -72,10 +72,11 @@ namespace PracticeApi.Controllers
                 }
                 var fileNam = $"{Guid.NewGuid():N}_{file.FileName}";//新文件名
                 string imgPath = $"{dirPath + fileNam}";//储存文件路径
+                thePath = "../Uploads/Images/" + fileNam;
                 using var stream = new FileStream(imgPath, FileMode.Create);//文件流
                 await file.CopyToAsync(stream);//将上传的文件文件流，复制到fs中
                 stream.Flush();//清空文件流
-                return ResModel.Success(imgPath, "上传图片成功，新的文件路径已返回");
+                return ResModel.Success(thePath, "上传图片成功，新的文件路径已返回");
             }
             catch (Exception ex)
             {
@@ -113,7 +114,7 @@ namespace PracticeApi.Controllers
                 {
                     return ResModel.Failure<string>("操作失败，只能上传视频或音频，请重新上传");
                 }
-                var path = _env.ContentRootPath + @"/Uploads/Medias/";//获取项目的根目录的绝对路径
+                var path = "C:/Users/ZhangKaiCheng/Desktop/ac/SecurityNews/practice-proj/Web/views" + @"/Uploads/Medias/";//获取项目的根目录的绝对路径
                 string dirPath = Path.Combine(path + "/");//绝对路径，储存文件路径的文件夹
                 if (!Directory.Exists(dirPath))//查看文件夹是否存在
                 {
@@ -121,10 +122,11 @@ namespace PracticeApi.Controllers
                 }
                 var fileNam = $"{Guid.NewGuid():N}_{file.FileName}";//新文件名
                 string filePath = $"{dirPath + fileNam}";//储存文件路径
+                thePath = "../Uploads/Medias/" + fileNam;
                 using var stream = new FileStream(filePath, FileMode.Create);//文件流
                 await file.CopyToAsync(stream);//将上传的文件文件流，复制到fs中
                 stream.Flush();//清空文件流
-                return ResModel.Success(filePath, "上传文件成功，新的文件路径已返回");
+                return ResModel.Success(thePath, "上传文件成功，新的文件路径已返回");
             }
             catch (Exception ex)
             {

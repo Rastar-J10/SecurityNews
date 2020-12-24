@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components/layui-v2.5.7/layui/css/layui.css">
     <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
     <script src="../../components/layui-v2.5.7/layui/layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>分类管理</title>
     <style>
         * {
@@ -449,7 +450,7 @@
             //添加分类
             form.on('submit(formsort)', function (info) {
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsCategory/RecommendSort',
+                    url: window.url + '/NewsCategory/RecommendSort',
                     headers: { 'Authorization': localStorage.getExpire('token') },
                     data: JSON.stringify(info.field),
                     type: 'POST',
@@ -476,7 +477,7 @@
             //添加分类
             form.on('submit(formadd)', function (info) {
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsCategory/AddNewsCategory',
+                    url: window.url + '/NewsCategory/AddNewsCategory',
                     headers: { 'Authorization': localStorage.getExpire('token') },
                     data: JSON.stringify(info.field),
                     type: 'POST',
@@ -503,7 +504,7 @@
             //编辑分类
             form.on('submit(formedit)', function (info) {
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsCategory/UpdateNewsCategory',
+                    url: window.url + '/NewsCategory/UpdateNewsCategory',
                     headers: { 'Authorization': localStorage.getExpire('token') },
                     data: JSON.stringify(info.field),
                     type: 'POST',
@@ -540,7 +541,7 @@
                 }, function () {
                     console.log(id);
                     $.ajax({
-                        url: localStorage.getItem('url') + '/NewsCategory/DeleteNewsCategory',
+                        url: window.url + '/NewsCategory/DeleteNewsCategory',
                         headers: { 'Authorization': localStorage.getExpire('token') },
                         data: JSON.stringify({ "id": id }),
                         contentType: 'application/json; charset=UTF-8',
@@ -576,7 +577,7 @@
             //分类列表数据
             function categorylist(id) {
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsCategory/SelectCategoryList',
+                    url: window.url + '/NewsCategory/SelectCategoryList',
                     headers: { 'Authorization': localStorage.getExpire('token') },
                     data: { "id": id },
                     dataType: 'json',
@@ -605,7 +606,7 @@
             function tb() {
                 table.render({
                     elem: '#table'
-                    , url: localStorage.getItem('url') + '/NewsCategory/SelectCategoryAll'
+                    , url: window.url + '/NewsCategory/SelectCategoryAll'
                     , page: {
                         layout: ['limit', 'count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
                         , limit: 20
@@ -650,7 +651,7 @@
             function wheretb() {
                 table.render({
                     elem: '#wheretb'
-                    , url: localStorage.getItem('url') + '/NewsCategory/SelectCategoryAll'
+                    , url: window.url + '/NewsCategory/SelectCategoryAll'
                     , page: {
                         layout: ['limit', 'count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
                         , limit: 10
@@ -696,7 +697,7 @@
             function Recordtb() {
                 table.render({
                     elem: '#editRecord'
-                    , url: localStorage.getItem('url') + '/OpeaateLog/CategoryEditRecord'
+                    , url: window.url + '/OpeaateLog/CategoryEditRecord'
                     , page: {
                         layout: ['count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
                         , limit: 3

@@ -47,7 +47,7 @@ namespace Practice.Repositories
                 sqlWhere += "`status` !=0";
             }
             //SQL语句
-            var sql = $"select id,cover,title,`status`,operateTime,(select COUNT(id) from news_detail where operator=@userId AND {sqlWhere}) as count from news_detail where operator=@userId AND {sqlWhere} LIMIT @pageIndex,10";
+            var sql = $"select id,cover,title,`status`,operateTime,(select COUNT(id) from news_detail where operator=@userId AND {sqlWhere}) as count from news_detail where operator=@userId AND {sqlWhere} order by operateTime desc LIMIT @pageIndex,10";
             var result = await _connection.QueryAsync<dynamic>(sql, new { status, pageIndex,userId });
             return result;
         }

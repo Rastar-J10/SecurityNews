@@ -7,3 +7,12 @@ D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0
 D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.csproj.CoreCompileInputs.cache
 D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.dll
 D:\bst-test\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.pdb
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\bin\Release\netstandard2.0\Autofac.AttributeExtensions.deps.json
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\bin\Release\netstandard2.0\Autofac.AttributeExtensions.dll
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\bin\Release\netstandard2.0\Autofac.AttributeExtensions.pdb
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.csprojAssemblyReference.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.AssemblyInfoInputs.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.AssemblyInfo.cs
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.csproj.CoreCompileInputs.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.dll
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Autofac.AttributeExtensions\obj\Release\netstandard2.0\Autofac.AttributeExtensions.pdb

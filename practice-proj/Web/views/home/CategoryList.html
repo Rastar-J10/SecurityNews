@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\layui.css">
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\font-awesome.min.css">
     <script src="../../components\layuiadmin\layui\layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>分类列表</title>
     <style>
         * {
@@ -243,7 +244,7 @@
                 }
                 //调用查询分类接口
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsCategory/SelectNewsCategory',
+                    url: window.url+'/NewsCategory/SelectNewsCategory',
                     dataType: 'json',
                     type: 'get',
                     success: function (res) {
@@ -274,7 +275,7 @@
             //查询该分类下的新闻
             function SelectDetailsCategory(index) {
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsDetails/SelectNewsDetailsCategory',
+                    url: window.url+'/NewsDetails/SelectNewsDetailsCategory',
                     contentType: 'application/json; charset=UTF-8',
                     async: false,
                     data: { id: id, pageIndex: index },

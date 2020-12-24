@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\layui.css">
     <link rel="stylesheet" href="../../components\layuiadmin\layui\css\font-awesome.min.css">
     <script src="../../components\layuiadmin\layui\layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <style>
         * {
             margin: 0;
@@ -221,7 +222,7 @@
             //生成验证码图片
             function verifycode() {
                 $.ajax({
-                    url: localStorage.getItem('url')+"/VerifyCode/GenerateVerifyCode",
+                    url: window.url+"/VerifyCode/GenerateVerifyCode",
                     dataType: "json",
                     type: "get",
                     success: function (res) {
@@ -245,7 +246,7 @@
                     $('.exit').css("display", "inline");
                 }
                 $.ajax({
-                    url: localStorage.getItem('url')+'/NewsCategory/SelectNewsCategory',
+                    url: window.url+'/NewsCategory/SelectNewsCategory',
                     dataType: 'json',
                     type: 'get',
                     success: function (res) {
@@ -301,7 +302,7 @@
             //监听提交
             form.on('submit(formRegister)', function (info) {
                 $.ajax({
-                    url: localStorage.getItem('url')+'/UserAccount/UserRegister',
+                    url: window.url+'/UserAccount/UserRegister',
                     data: JSON.stringify(info.field),
                     type: 'POST',
                     contentType: 'application/json; charset=UTF-8',

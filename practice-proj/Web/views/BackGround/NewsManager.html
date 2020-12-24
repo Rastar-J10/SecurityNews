@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components/layuiadmin/layui/css/layui.css">
     <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
     <script src="../../components/layuiadmin/layui/layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>新闻管理</title>
     <style>
         * {
@@ -384,7 +385,7 @@
                 function SelectNewsManager(status, pageIndex) {
                     console.log(status, pageIndex);
                     $.ajax({
-                        url: localStorage.getItem('url') + '/NewsManager/SelectNewsManager',
+                        url: window.url + '/NewsManager/SelectNewsManager',
                         headers: { 'Authorization': localStorage.getExpire('token') },
                         data: { "status": status, "pageIndex": pageIndex },
                         dataType: 'json',
@@ -422,7 +423,7 @@
                 //新闻管理界面标题模糊查询
                 function SelectNewsManagerTitle(title, pageIndex) {
                     $.ajax({
-                        url: localStorage.getItem('url') + '/NewsManager/SelectNewsManagerTitle',
+                        url: window.url + '/NewsManager/SelectNewsManagerTitle',
                         headers: { 'Authorization': localStorage.getExpire('token') },
                         data: { "title": title, "pageIndex": pageIndex },
                         dataType: 'json',
@@ -467,7 +468,7 @@
                         btn: ['删除', '取消'], icon: 3, title: '删除', offset: '270px'
                     }, function () {
                         $.ajax({
-                            url: localStorage.getItem('url') + '/NewsManager/NewsDetailState',
+                            url: window.url + '/NewsManager/NewsDetailState',
                             headers: { 'Authorization': localStorage.getExpire('token') },
                             data: JSON.stringify({ "id": id, "status": 0 }),
                             contentType: 'application/json; charset=UTF-8',

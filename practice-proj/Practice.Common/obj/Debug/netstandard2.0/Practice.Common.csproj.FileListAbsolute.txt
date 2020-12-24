@@ -18,3 +18,13 @@ D:\bst-test\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Comm
 D:\bst-test\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.pdb
 D:\bst-test\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.csproj.CoreCompileInputs.cache
 D:\bst-test\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.csprojAssemblyReference.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\bin\Debug\netstandard2.0\Practice.Common.deps.json
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\bin\Debug\netstandard2.0\Practice.Common.dll
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\bin\Debug\netstandard2.0\Practice.Common.pdb
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\bin\Debug\netstandard2.0\Practice.Common.xml
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.csprojAssemblyReference.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.AssemblyInfoInputs.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.AssemblyInfo.cs
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.csproj.CoreCompileInputs.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.dll
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.Common\obj\Debug\netstandard2.0\Practice.Common.pdb

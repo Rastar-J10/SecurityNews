@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components/layui-v2.5.7/layui/css/layui.css">
     <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
     <script src="../../components/layui-v2.5.7/layui/layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>新闻管理后台首页</title>
     <style>
         * {
@@ -416,7 +417,7 @@
                         obj.del();
                         layer.close(index);
                         $.ajax({
-                            url: localStorage.getItem('url') + '/NewsManager/NewsDetailState',
+                            url: window.url + '/NewsManager/NewsDetailState',
                             headers: { 'Authorization': localStorage.getExpire('token') },
                             data: JSON.stringify({ "id": data.id, "status": 1 }),
                             contentType: 'application/json; charset=UTF-8',
@@ -455,7 +456,7 @@
             function SelectBackGroundPage(status, pageIndex) {
                 console.log(status, pageIndex);
                 $.ajax({
-                    url: localStorage.getItem('url') + '/NewsDetails/SelectBackGroundPage',
+                    url: window.url + '/NewsDetails/SelectBackGroundPage',
                     headers: { 'Authorization': localStorage.getExpire('token') },
                     data: { "status": status, "pageIndex": pageIndex },
                     dataType: 'json',
@@ -491,7 +492,7 @@
             function tb() {
                 table.render({
                     elem: '#table'
-                    , url: localStorage.getItem('url') + '/NewsManager/SelectNewsManager'
+                    , url: window.url + '/NewsManager/SelectNewsManager'
                     , page: {
                         layout: ['count', 'prev', 'first', 'page', 'last', 'next', 'skip']
                         , first: '首页'

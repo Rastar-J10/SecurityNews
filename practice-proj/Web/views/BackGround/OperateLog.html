@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../components/layui-v2.5.7/layui/css/layui.css">
     <link rel="stylesheet" href="../../components/layuiadmin/layui/css/font-awesome.min.css">
     <script src="../../components/layui-v2.5.7/layui/layui.js"></script>
+    <script src="../../components/static/globalVar.js"></script>
     <title>操作日志</title>
     <style>
         * {
@@ -241,7 +242,7 @@
             function tb() {
                 table.render({
                     elem: '#table'
-                    , url: localStorage.getItem('url') + '/OpeaateLog/SelectLogTime'
+                    , url: window.url + '/OpeaateLog/SelectLogTime'
                     , page: {
                         layout: ['limit', 'count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
                         , limit: 10
@@ -284,7 +285,7 @@
             function tbTime(time) {
                 table.render({
                     elem: '#tableTime'
-                    , url: localStorage.getItem('url') + '/OpeaateLog/SelectLogTime'
+                    , url: window.url + '/OpeaateLog/SelectLogTime'
                     , page: {
                         layout: ['limit', 'count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
                         , limit: 10
@@ -337,7 +338,7 @@
             function tbText() {
                 table.render({
                     elem: '#tableText'
-                    , url: localStorage.getItem('url') + '/OpeaateLog/SelectLogText'
+                    , url: window.url + '/OpeaateLog/SelectLogText'
                     , page: {
                         layout: ['limit', 'count', 'prev', 'first', 'page', 'last', 'next', 'skip', 'groups']
                         , limit: 10

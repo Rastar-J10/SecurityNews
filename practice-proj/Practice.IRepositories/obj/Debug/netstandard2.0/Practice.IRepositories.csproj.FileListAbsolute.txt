@@ -18,3 +18,13 @@ D:\bst-test\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practi
 D:\bst-test\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.dll
 D:\bst-test\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.pdb
 D:\bst-test\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.csprojAssemblyReference.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\bin\Debug\netstandard2.0\Practice.IRepositories.deps.json
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\bin\Debug\netstandard2.0\Practice.IRepositories.dll
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\bin\Debug\netstandard2.0\Practice.IRepositories.pdb
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\bin\Debug\netstandard2.0\Practice.IRepositories.xml
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.csprojAssemblyReference.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.AssemblyInfoInputs.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.AssemblyInfo.cs
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.csproj.CoreCompileInputs.cache
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.dll
+C:\Users\ZhangKaiCheng\Desktop\ac\SecurityNews\practice-proj\Practice.IRepositories\obj\Debug\netstandard2.0\Practice.IRepositories.pdb
